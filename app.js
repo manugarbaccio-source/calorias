@@ -243,6 +243,44 @@ function ahoraHHMM() {
   return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
 }
 
+/* ── ayuno ── */
+// El ayuno arranca en la última comida registrada DESPUÉS de las 19 hs (la cena).
+// El agua no lo corta; cualquier comida posterior sí.
+function renderAyuno() {
+  const cont = $("#tarjeta-ayuno");
+  const comidas = comidasCache.filter(c => !esAgua(c) && c.creado)
+    .sort((a, b) => a.creado.localeCompare(b.creado));
+  let cena = null;
+  for (const c of comidas) {
+    if (new Date(c.creado).getHours() >= 19) cena = c;
+  }
+  if (!cena) {
+    cont.innerHTML = `<span class="icono">🌙</span><div>
+      <p class="horas">Ayuno</p>
+      <p class="detalle-ayuno">Registrá una comida después de las 19 hs para arrancar el contador</p></div>`;
+    return;
+  }
+  const posteriores = comidas.filter(c => c.creado > cena.creado);
+  const inicio = new Date(cena.creado);
+  const fin = posteriores.length ? new Date(posteriores[0].creado) : new Date();
+  const mins = Math.max(0, Math.floor((fin - inicio) / 60000));
+  const h = Math.floor(mins / 60), m = mins % 60;
+  const dur = `${h} h ${String(m).padStart(2, "0")} min`;
+  const desde = `${horaDe(cena)}`;
+  if (posteriores.length) {
+    cont.innerHTML = `<span class="icono">🍳</span><div>
+      <p class="horas">Ayunaste ${dur}</p>
+      <p class="detalle-ayuno">De ${desde} (${cena.nombre}) a ${horaDe(posteriores[0])} (${posteriores[0].nombre})</p></div>`;
+  } else {
+    const trofeo = h >= 16 ? " 🏆" : (h >= 12 ? " 🔥" : "");
+    const aviso = h >= 36 ? " · ¿te olvidaste de registrar alguna comida?" : "";
+    cont.innerHTML = `<span class="icono">⏳</span><div>
+      <p class="horas">${dur} de ayuno${trofeo}</p>
+      <p class="detalle-ayuno">Desde las ${desde} (${cena.nombre})${aviso}</p></div>`;
+  }
+}
+setInterval(renderAyuno, 60000); // se actualiza solo cada minuto
+
 function renderAgua() {
   const objetivo = config.objetivoAgua || 3;
   const litros = comidasCache.filter(c => c.fecha === hoyStr() && esAgua(c))
@@ -309,6 +347,7 @@ function actualizarKcalItem(i) {
 
 async function renderHoy() {
   renderAgua();
+  renderAyuno();
   const hoy = hoyStr();
   const deHoy = comidasCache.filter(c => c.fecha === hoy && !esAgua(c))
     .sort((a, b) => (a.creado || "").localeCompare(b.creado || ""));

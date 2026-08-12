@@ -94,6 +94,23 @@ h3 { font-size: 0.95rem; margin: 1.4rem 0 0.4rem; }
 .resumen-texto p { margin: 0.2rem 0; }
 #resumen-restante { color: var(--texto-suave); font-size: 0.9rem; }
 
+/* ── ayuno ── */
+.tarjeta-ayuno {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+}
+.tarjeta-ayuno .icono { font-size: 1.8rem; }
+.tarjeta-ayuno p { margin: 0.1rem 0; }
+.tarjeta-ayuno .horas { font-weight: 700; font-size: 1.05rem; }
+.tarjeta-ayuno .detalle-ayuno { font-size: 0.82rem; color: var(--texto-suave); }
+.tarjeta-ayuno.oculto { display: none; }
+
 /* ── vasito de agua ── */
 .tarjeta-agua {
   display: flex;
