@@ -96,7 +96,7 @@ const NUMEROS = {
   seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, doce: 12,
   medio: 0.5, media: 0.5, docena: 12,
 };
-const RELLENO = new Set(["de", "del", "el", "la", "los", "las", "al", "a", "en", "poco", "poquito", "plato", "porcion", "pedazo", "trozo", "unos", "unas"]);
+const RELLENO = new Set(["de", "del", "el", "la", "los", "las", "al", "a", "en", "con", "sin", "poco", "poquito", "plato", "porcion", "pedazo", "trozo", "unos", "unas"]);
 
 function extraerCantidad(texto) {
   let cantidad = 1;
@@ -122,28 +122,33 @@ function extraerCantidad(texto) {
 }
 
 function parsearEntrada(texto) {
-  const norm = normalizar(texto);
-  if (!norm) return [];
-  const segmentos = norm.split(/\s*,\s*|\s+y\s+|\s*\+\s*/).filter(Boolean);
+  // dividir ANTES de normalizar: normalizar() borra las comas
+  const segmentos = texto.toLowerCase()
+    .split(/\s*[,;+]\s*|\s+y\s+/)
+    .map(normalizar)
+    .filter(Boolean);
   const items = [];
   for (const seg of segmentos) {
     const { cantidad, query } = extraerCantidad(seg);
     if (!query) continue;
-    // primero probamos el segmento entero ("cafe con leche" es un solo alimento)
-    const candidatos = buscarCandidatos(query);
-    if (candidatos.length && candidatos[0].puntaje >= 50) {
-      items.push({ original: seg, cantidad, query, candidatos });
-      continue;
-    }
-    // si no matchea y tiene "con", lo partimos ("milanesa con pure")
     if (query.includes(" con ")) {
+      // "cafe con leche" es UN alimento; "milanesa con pure" son DOS.
+      // Solo lo dejamos entero si el alimento que matchea también lleva "con" en el nombre.
+      const candidatos = buscarCandidatos(query);
+      const top = candidatos[0];
+      const esAlimentoConCon = top && top.puntaje >= 50 &&
+        [top.alimento.n, ...(top.alimento.a || [])].some(x => normalizar(x).includes(" con "));
+      if (esAlimentoConCon) {
+        items.push({ original: seg, cantidad, query, candidatos });
+        continue;
+      }
       for (const parte of query.split(" con ")) {
         const sub = extraerCantidad(parte.trim());
         if (!sub.query) continue;
-        items.push({ original: parte.trim(), cantidad: cantidad * sub.cantidad, query: sub.query, candidatos: buscarCandidatos(sub.query) });
+        items.push({ original: sub.query, cantidad: cantidad * sub.cantidad, query: sub.query, candidatos: buscarCandidatos(sub.query) });
       }
     } else {
-      items.push({ original: seg, cantidad, query, candidatos });
+      items.push({ original: seg, cantidad, query, candidatos: buscarCandidatos(query) });
     }
   }
   return items;
@@ -191,7 +196,9 @@ function buscarCandidatos(query) {
 /* ══════════════════ Open Food Facts (respaldo) ══════════════════ */
 
 async function buscarOFF(query) {
-  const url = "https://world.openfoodfacts.org/cgi/search.pl?action=process&json=1&search_simple=1&page_size=6"
+  // world.openfoodfacts.org bloquea CORS en la búsqueda de texto libre;
+  // el espejo .net la permite y sirve para estimaciones.
+  const url = "https://world.openfoodfacts.net/cgi/search.pl?action=process&json=1&search_simple=1&page_size=6"
     + "&fields=product_name,product_name_es,brands,nutriments,quantity"
     + "&search_terms=" + encodeURIComponent(query);
   const res = await fetch(url);
@@ -468,11 +475,13 @@ $("#form-alimento").addEventListener("submit", async (e) => {
 });
 
 // ajustes
-$("#btn-guardar-objetivo").addEventListener("click", () => {
+$("#btn-guardar-objetivo").addEventListener("click", (e) => {
   config.objetivo = Number($("#cfg-objetivo").value) || 0;
   guardarConfig();
   renderHoy(); renderHistorial();
-  alert("Objetivo guardado ✓");
+  const btn = e.target;
+  btn.textContent = "Guardado ✓";
+  setTimeout(() => { btn.textContent = "Guardar"; }, 1500);
 });
 
 $("#btn-guardar-supa").addEventListener("click", async () => {
