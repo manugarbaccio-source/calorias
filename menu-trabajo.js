@@ -1,0 +1,131 @@
+// Menú del trabajo (Food Service / catering.foodservice.com.ar).
+// Las calorías son FIJAS POR CATEGORÍA (verificado en la web: el rango no cambia entre días).
+// Lo único que rota semana a semana son los platos: actualizar PLATOS_TRABAJO con el PDF nuevo.
+// Semana cargada: 18/08/2026 al 24/08/2026.
+
+const CATEGORIAS_TRABAJO = {
+  "Plato Principal":      { kcal: 850, alias: ["plato principal", "principal", "menu del dia"] },
+  "Plato Principal 2":    { kcal: 850, alias: ["plato principal 2", "principal 2"] },
+  "Hipernutritivo":       { kcal: 900, alias: ["hipernutritivo", "hiper"] },
+  "Healthy Food":         { kcal: 500, alias: ["healthy", "healthy food", "dieta", "sin sal", "dieta sin sal"] },
+  "Plato Light":          { kcal: 700, alias: ["light", "plato light"] },
+  "Ensalada SAP":         { kcal: 400, alias: ["ensalada sap", "sap"] },
+  "Tarta":                { kcal: 400, alias: ["tarta del trabajo"] },
+  "Sandwich":             { kcal: 650, alias: ["sandwich del trabajo", "sanguche del trabajo"] },
+  "Pizza":                { kcal: 550, alias: ["pizza del trabajo"] },
+  "Pasta":                { kcal: 750, alias: ["pasta del trabajo"] },
+  "Vegetariano":          { kcal: 700, alias: ["vegetariano", "veggie"] },
+  "Plato Veggie":         { kcal: 500, alias: ["plato veggie"] },
+  "Show":                 { kcal: 700, alias: ["show", "empanadas show"] },
+  "Opcion Milanesa":      { kcal: 388, alias: ["opcion milanesa", "milanesa del dia", "milanesa del trabajo"] },
+  "Tortilla y Omelette":  { kcal: 500, alias: ["tortilla del trabajo", "omelette"] },
+  "VAMOS CAMPEONES":      { kcal: 500, alias: ["vamos campeones", "campeones"] },
+  "Wok Gourmet":          { kcal: 500, alias: ["wok"] },
+  "Wrap Gourmet":         { kcal: 500, alias: ["wrap"] },
+  "Hamburguesa Especial": { kcal: 900, alias: ["hamburguesa especial", "burger especial"] },
+  "Ensalada Gourmet":     { kcal: 500, alias: ["ensalada gourmet"] },
+  "Plato Etnico":         { kcal: 600, alias: ["etnico", "plato etnico"] },
+  "Plato Vegano Gourmet": { kcal: 500, alias: ["vegano", "plato vegano"] },
+};
+
+// d = fechas en que se sirve (para priorizar el plato de HOY en las búsquedas)
+const PLATOS_TRABAJO = [
+  // ── Martes 18/08 ──
+  { n: "Bondiola de cerdo con salsa de ciruelas y papas a la crema", cat: "Plato Principal", d: ["2026-08-18"] },
+  { n: "Polenta con estofado de carne", cat: "Hipernutritivo", d: ["2026-08-18"] },
+  { n: "Pollo con panaché de papa, remolacha y zanahoria", cat: "Healthy Food", d: ["2026-08-18"] },
+  { n: "Milanesa de muzzarella con reducción de tomate y albahaca y chambota italiana", cat: "Plato Light", d: ["2026-08-18"] },
+  { n: "Ensalada completa con cubos de jamón y queso SAP", cat: "Ensalada SAP", d: ["2026-08-18"] },
+  { n: "Tarta Capresse", cat: "Tarta", d: ["2026-08-18"] },
+  { n: "Sandwiches de miga de jamón y queso", cat: "Sandwich", d: ["2026-08-18"] },
+  { n: "Pizza capresse con pesto de albahaca", cat: "Pizza", d: ["2026-08-18"] },
+  { n: "Canelones de carne y verdura con salsa blanca y fileto", cat: "Pasta", d: ["2026-08-18"] },
+  { n: "Milhojas de calabaza a la napolitana con berenjenas y cebollas asadas", cat: "Vegetariano", d: ["2026-08-18"] },
+  { n: "Empanadas de carne, pollo, jamón y queso, verdura", cat: "Show", d: ["2026-08-18", "2026-08-20"] },
+  { n: "Milanesa de carne a la fugazzeta con zapallitos revueltos", cat: "Opcion Milanesa", d: ["2026-08-18"] },
+  { n: "Omelette de acelga y zanahoria", cat: "Tortilla y Omelette", d: ["2026-08-18"] },
+  { n: "Mc tasty con lechuga, tomate y cebollas caramelizadas y papas rústicas", cat: "VAMOS CAMPEONES", d: ["2026-08-18"] },
+  { n: "Wok de arroz integral con pollo, vegetales y salsa teriyaki", cat: "Wok Gourmet", d: ["2026-08-18"] },
+  { n: "Wrap de bondiola, vegetales y arroz integral con batatas asadas", cat: "Wrap Gourmet", d: ["2026-08-18"] },
+  { n: "Pulled meat burger con queso, tomate, barbacoa y cebollas caramelizadas", cat: "Hamburguesa Especial", d: ["2026-08-18"] },
+  { n: "Rainbow salad con cebada, chauchas, choclo, repollo, zanahoria y huevo", cat: "Ensalada Gourmet", d: ["2026-08-18"] },
+  { n: "Chow fan (China)", cat: "Plato Etnico", d: ["2026-08-18"] },
+  { n: "Kepe de trigo burgol y garbanzos con emulsión de remolacha y papas", cat: "Plato Vegano Gourmet", d: ["2026-08-18"] },
+
+  // ── Miércoles 19/08 ──
+  { n: "Pollo al horno con salsa de pimientos rojos y curry, con batatas al romero", cat: "Plato Principal", d: ["2026-08-19"] },
+  { n: "Cazuela de calamares, kani kama y papas", cat: "Hipernutritivo", d: ["2026-08-19"] },
+  { n: "Carne asada en cocción lenta con puré fiorentino", cat: "Healthy Food", d: ["2026-08-19"] },
+  { n: "Zapallitos rellenos caprese con salsa fileto y arroz salteado", cat: "Plato Light", d: ["2026-08-19"] },
+  { n: "Ensalada de hojas verdes, choclo, arroz, aceitunas, tomates secos y atún", cat: "Ensalada SAP", d: ["2026-08-19"] },
+  { n: "Tarta de jamón, queso y cebollas", cat: "Tarta", d: ["2026-08-19"] },
+  { n: "Ciabatta de jamón y queso con lechuga, tomate y huevo", cat: "Sandwich", d: ["2026-08-19"] },
+  { n: "Pizza de muzzarella con verdeo", cat: "Pizza", d: ["2026-08-19"] },
+  { n: "Fussiles con salsa scarparo", cat: "Pasta", d: ["2026-08-19"] },
+  { n: "Creps de humita con salsa blanca y fileto", cat: "Vegetariano", d: ["2026-08-19"] },
+  { n: "Empanadas de carne, pollo, jamón y queso", cat: "Show", d: ["2026-08-19"] },
+  { n: "Milanesa de cerdo con queso, tomate y pesto, con puré de boniato", cat: "Opcion Milanesa", d: ["2026-08-19"] },
+  { n: "Tortilla de papas a la provenzal", cat: "Tortilla y Omelette", d: ["2026-08-19"] },
+  { n: "G.O.A.T. burger con cheddar, jamón tostado y cebolla crispy", cat: "VAMOS CAMPEONES", d: ["2026-08-19"] },
+  { n: "Wok de arroz y porotos negros con ternera y salsa huancaína", cat: "Wok Gourmet", d: ["2026-08-19"] },
+  { n: "Wrap de pollo y albahaca con zanahorias al sésamo", cat: "Wrap Gourmet", d: ["2026-08-19"] },
+  { n: "Bacon Jam Burger con papas al tomillo", cat: "Hamburguesa Especial", d: ["2026-08-19"] },
+  { n: "Fitbowl de arroz y porotos negros con pollo", cat: "Ensalada Gourmet", d: ["2026-08-19"] },
+  { n: "Cachapas de cerdo con queso y vegetales, con papas al verdeo", cat: "Plato Etnico", d: ["2026-08-19"] },
+  { n: "Ratatouille con quinoa", cat: "Plato Vegano Gourmet", d: ["2026-08-19"] },
+
+  // ── Jueves 20/08 ──
+  { n: "Tallarines a la bolognesa", cat: "Plato Principal", d: ["2026-08-20"] },
+  { n: "Lasagna con salsa fileto y crema", cat: "Plato Principal 2", d: ["2026-08-20"] },
+  { n: "Ragout de pollo con arroz", cat: "Hipernutritivo", d: ["2026-08-20"] },
+  { n: "Pollo con arroz salteado con champignones", cat: "Healthy Food", d: ["2026-08-20"] },
+  { n: "Terrina de merluza con salsa de queso crema y bastones de zanahoria", cat: "Plato Light", d: ["2026-08-20"] },
+  { n: "Ensalada de hojas verdes, zanahoria, cherry, jamón, queso y brotes de soja", cat: "Ensalada SAP", d: ["2026-08-20"] },
+  { n: "Tarta de zapallitos y muzzarella", cat: "Tarta", d: ["2026-08-20"] },
+  { n: "Pebetes de jamón y queso con lechuga, tomate y huevo", cat: "Sandwich", d: ["2026-08-20"] },
+  { n: "Fugazetta con jamón", cat: "Pizza", d: ["2026-08-20"] },
+  { n: "Mostacholes con salsa de queso", cat: "Pasta", d: ["2026-08-20"] },
+  { n: "Berenjenas rellenas de quinoa, queso y ricotta", cat: "Vegetariano", d: ["2026-08-20"] },
+  { n: "Milanesa de zucchinis a la napolitana con ratatouille", cat: "Opcion Milanesa", d: ["2026-08-20"] },
+  { n: "Omelette de queso", cat: "Tortilla y Omelette", d: ["2026-08-20"] },
+  { n: "Mc chicken Food con cheddar, pepino, cebolla y lechuga", cat: "VAMOS CAMPEONES", d: ["2026-08-20"] },
+  { n: "Wok de cebada, cerdo, vegetales y maní", cat: "Wok Gourmet", d: ["2026-08-20"] },
+  { n: "Wrap de carne braseada con vegetales y batatas", cat: "Wrap Gourmet", d: ["2026-08-20"] },
+  { n: "Hamburguesa Pons con cebolla frita, queso y barbacoa", cat: "Hamburguesa Especial", d: ["2026-08-20"] },
+  { n: "Marroquí salad con garbanzos, aceitunas, remolacha y queso", cat: "Ensalada Gourmet", d: ["2026-08-20"] },
+  { n: "Taquitos de cerdo con papas al chimichurri (México)", cat: "Plato Etnico", d: ["2026-08-20"] },
+  { n: "Albóndigas de lentejas con salsa de tomates y puré de zanahoria", cat: "Plato Vegano Gourmet", d: ["2026-08-20"] },
+
+  // ── Lunes 24/08 ──
+  { n: "Milanesa de carne a la fugazzeta con puré de papas", cat: "Plato Principal", d: ["2026-08-24"] },
+  { n: "Albondiguitas al fileto con arroz amarillo", cat: "Hipernutritivo", d: ["2026-08-24"] },
+  { n: "Carne asada en cocción lenta con puré de papas al verdeo", cat: "Healthy Food", d: ["2026-08-24"] },
+  { n: "Font de vegetales asados con cubos de queso y cerdo", cat: "Plato Light", d: ["2026-08-24"] },
+  { n: "Ensalada de hojas verdes, atún, cherry, choclo, huevo y queso", cat: "Ensalada SAP", d: ["2026-08-24"] },
+  { n: "Tarta de queso, cebolla y aceitunas negras", cat: "Tarta", d: ["2026-08-24"] },
+  { n: "Pebetes combinados", cat: "Sandwich", d: ["2026-08-24"] },
+  { n: "Pizza de muzzarella con cherry asados y pesto", cat: "Pizza", d: ["2026-08-24"] },
+  { n: "Mostacholes con estofado de pollo", cat: "Pasta", d: ["2026-08-24"] },
+  { n: "Risotto de calabaza y brócoli", cat: "Vegetariano", d: ["2026-08-24"] },
+  { n: "Milanesas de berenjena con pesto de tomates secos y arroz amarillo", cat: "Opcion Milanesa", d: ["2026-08-24"] },
+  { n: "Tortilla de brócoli, queso y tomate", cat: "Tortilla y Omelette", d: ["2026-08-24"] },
+  { n: "Mc soja Food con boniato asado", cat: "VAMOS CAMPEONES", d: ["2026-08-24"] },
+  { n: "Wok de tallarines, cerdo y vegetales con teriyaki", cat: "Wok Gourmet", d: ["2026-08-24"] },
+  { n: "Wrap de papas rústicas vegano con zanahorias al sésamo", cat: "Wrap Gourmet", d: ["2026-08-24"] },
+  { n: "Pulled pork burger con pepino, repollos y cebollas caramelizadas", cat: "Hamburguesa Especial", d: ["2026-08-24"] },
+  { n: "Green salad con brócoli, papas, pollo y semillas de lino", cat: "Ensalada Gourmet", d: ["2026-08-24"] },
+  { n: "Mac and cheese (USA)", cat: "Plato Etnico", d: ["2026-08-24"] },
+  { n: "Curry vegano de porotos blancos con arroz", cat: "Plato Vegano Gourmet", d: ["2026-08-24"] },
+];
+
+// Convertimos cada plato al formato de la app: k = kcal de la porción entera,
+// con p=100 la porción se representa como "100" en el campo de gramos (100 = plato entero, 50 = medio plato).
+const ALIMENTOS_TRABAJO = PLATOS_TRABAJO.map(p => {
+  const cat = CATEGORIAS_TRABAJO[p.cat] || { kcal: 600, alias: [] };
+  return {
+    n: p.n,
+    a: [...cat.alias, p.cat.toLowerCase()],
+    k: cat.kcal, p: 100, u: "1 porción",
+    trabajo: true, dias: p.d,
+  };
+});

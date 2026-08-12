@@ -135,11 +135,10 @@ function parsearEntrada(texto) {
       // "cafe con leche" es UN alimento; "milanesa con pure" son DOS.
       // Solo lo dejamos entero si el alimento que matchea también lleva "con" en el nombre.
       const candidatos = buscarCandidatos(query);
-      const top = candidatos[0];
-      const esAlimentoConCon = top && top.puntaje >= 50 &&
-        [top.alimento.n, ...(top.alimento.a || [])].some(x => normalizar(x).includes(" con "));
-      if (esAlimentoConCon) {
-        items.push({ original: seg, cantidad, query, candidatos });
+      const idxCon = candidatos.findIndex(c => c.puntaje >= 55 &&
+        [c.alimento.n, ...(c.alimento.a || [])].some(x => normalizar(x).includes(" con ")));
+      if (idxCon !== -1) {
+        items.push({ original: seg, cantidad, query, candidatos, elegido: idxCon });
         continue;
       }
       for (const parte of query.split(" con ")) {
@@ -161,6 +160,7 @@ let misAlimentos = []; // alimentos propios del usuario (cache)
 function todosLosAlimentos() {
   return [
     ...misAlimentos.map(f => ({ n: f.nombre, a: [], k: f.kcal100, p: f.porcion, u: f.unidad || "1 porción", propio: true, id: f.id })),
+    ...(typeof ALIMENTOS_TRABAJO !== "undefined" ? ALIMENTOS_TRABAJO : []),
     ...BASE_ALIMENTOS,
   ];
 }
@@ -187,6 +187,7 @@ function buscarCandidatos(query) {
       mejor = Math.max(mejor, puntuarNombre(normalizar(alias), q));
     }
     if (alim.propio && mejor > 0) mejor += 5; // priorizar alimentos propios
+    if (alim.trabajo && mejor > 0 && alim.dias && alim.dias.includes(hoyStr())) mejor += 12; // el plato de HOY del trabajo primero
     if (mejor >= 30) resultados.push({ alimento: alim, puntaje: mejor });
   }
   resultados.sort((a, b) => b.puntaje - a.puntaje);
@@ -241,12 +242,13 @@ function renderResultados() {
     div.className = "item-resultado";
     const tieneMatch = item.candidatos.length > 0;
     if (tieneMatch && item.gramos === undefined) {
-      item.elegido = 0;
-      item.gramos = Math.round(item.candidatos[0].alimento.p * item.cantidad);
+      item.elegido = item.elegido ?? 0;
+      item.gramos = Math.round(item.candidatos[item.elegido].alimento.p * item.cantidad);
     }
-    let opciones = item.candidatos.map((c, j) =>
-      `<option value="${j}" ${j === item.elegido ? "selected" : ""}>${c.alimento.n} · ${c.alimento.k} kcal/100g${c.alimento.propio ? " ★" : ""}</option>`
-    ).join("");
+    let opciones = item.candidatos.map((c, j) => {
+      const desc = c.alimento.trabajo ? `~${c.alimento.k} kcal · 🏢 trabajo` : `${c.alimento.k} kcal/100g`;
+      return `<option value="${j}" ${j === item.elegido ? "selected" : ""}>${c.alimento.n} · ${desc}${c.alimento.propio ? " ★" : ""}</option>`;
+    }).join("");
     div.innerHTML = `
       <span class="original">"${item.original}" ${item.cantidad !== 1 ? `× ${item.cantidad}` : ""}</span>
       ${tieneMatch ? `

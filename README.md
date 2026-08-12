@@ -56,6 +56,17 @@ En cada dispositivo hay que pegar la URL y clave de Supabase una vez, en Ajustes
 Las calorías de la base son **estimaciones promedio** — sirven para llevar un registro
 diario, no para precisión de laboratorio.
 
+## Menú del trabajo
+
+`menu-trabajo.js` tiene los platos del catering del trabajo (Food Service). Las calorías
+son fijas por categoría (Plato Principal ≈850, Light ≈700, etc. — verificado en la web),
+así que **solo hay que actualizar los nombres de los platos cuando cambia la semana**:
+pasarle a Claude el PDF nuevo de "Ingredientes por Plato" y pedirle que actualice el menú.
+
+En la app podés escribir el plato por nombre ("bondiola con ciruelas"), por categoría
+("plato principal", "el light", "wok") — y el plato de HOY aparece primero.
+El campo de gramos en estos platos es porcentaje de la porción: 100 = plato entero, 50 = la mitad.
+
 ## Archivos
 
 | Archivo | Qué es |
