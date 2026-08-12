@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2e7d32">
+<title>Calorías</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>🍽️ Calorías</h1>
+  <span id="modo-datos" class="badge" title="Dónde se guardan tus datos">local</span>
+</header>
+
+<main>
+  <!-- ══════════ TAB: HOY ══════════ -->
+  <section id="tab-hoy" class="tab activa">
+    <div class="resumen-dia">
+      <div class="anillo" id="anillo">
+        <div class="anillo-centro">
+          <span id="kcal-hoy">0</span>
+          <small>kcal</small>
+        </div>
+      </div>
+      <div class="resumen-texto">
+        <p id="resumen-objetivo">Sin objetivo definido</p>
+        <p id="resumen-restante"></p>
+      </div>
+    </div>
+
+    <form id="form-comida" autocomplete="off">
+      <label for="input-comida">¿Qué comiste?</label>
+      <div class="fila-input">
+        <input type="text" id="input-comida" placeholder="ej: 2 empanadas de carne y una coca"
+               enterkeyhint="search">
+        <button type="submit" class="btn-primario">Analizar</button>
+      </div>
+    </form>
+
+    <div id="resultados" class="oculto">
+      <h2>Encontré esto:</h2>
+      <div id="lista-resultados"></div>
+      <div class="fila-botones">
+        <button id="btn-confirmar" class="btn-primario">Agregar al día ✓</button>
+        <button id="btn-cancelar" class="btn-secundario">Cancelar</button>
+      </div>
+    </div>
+
+    <h2>Hoy</h2>
+    <div id="lista-hoy" class="lista-comidas"></div>
+  </section>
+
+  <!-- ══════════ TAB: HISTORIAL ══════════ -->
+  <section id="tab-historial" class="tab">
+    <h2>Historial</h2>
+    <div id="lista-historial"></div>
+  </section>
+
+  <!-- ══════════ TAB: ALIMENTOS ══════════ -->
+  <section id="tab-alimentos" class="tab">
+    <h2>Mis alimentos</h2>
+    <p class="ayuda">Agregá comidas que coman seguido en tu casa y no estén en la base
+      (ej: "tarta de la abuela"). Después las podés escribir por nombre en la pestaña Hoy.</p>
+    <form id="form-alimento">
+      <input type="text" id="alim-nombre" placeholder="Nombre (ej: tarta de verdura casera)" required>
+      <div class="fila-input">
+        <input type="number" id="alim-kcal" placeholder="kcal" required min="1" step="1">
+        <select id="alim-base">
+          <option value="100">por 100 g</option>
+          <option value="porcion">por porción</option>
+        </select>
+        <input type="number" id="alim-porcion" placeholder="g por porción" value="150" min="1" step="1">
+      </div>
+      <button type="submit" class="btn-primario">Guardar alimento</button>
+    </form>
+    <div id="lista-alimentos" class="lista-comidas"></div>
+  </section>
+
+  <!-- ══════════ TAB: AJUSTES ══════════ -->
+  <section id="tab-ajustes" class="tab">
+    <h2>Ajustes</h2>
+
+    <h3>Objetivo diario</h3>
+    <div class="fila-input">
+      <input type="number" id="cfg-objetivo" placeholder="kcal por día (ej: 2000)" min="0" step="50">
+      <button id="btn-guardar-objetivo" class="btn-primario">Guardar</button>
+    </div>
+
+    <h3>Supabase (nube)</h3>
+    <p class="ayuda">Si configurás Supabase, tus comidas se guardan en la nube y las ves
+      igual desde el celu y la PC. Seguí los pasos del README para crear el proyecto gratis.</p>
+    <input type="url" id="cfg-supa-url" placeholder="URL del proyecto (https://xxxx.supabase.co)">
+    <input type="text" id="cfg-supa-key" placeholder="anon public key">
+    <div class="fila-botones">
+      <button id="btn-guardar-supa" class="btn-primario">Conectar</button>
+      <button id="btn-migrar" class="btn-secundario">Subir datos locales a la nube</button>
+    </div>
+    <p id="estado-supa" class="ayuda"></p>
+
+    <h3>Respaldo</h3>
+    <div class="fila-botones">
+      <button id="btn-exportar" class="btn-secundario">Exportar JSON</button>
+    </div>
+  </section>
+</main>
+
+<nav>
+  <button data-tab="hoy" class="activa">📝<span>Hoy</span></button>
+  <button data-tab="historial">📅<span>Historial</span></button>
+  <button data-tab="alimentos">🥗<span>Alimentos</span></button>
+  <button data-tab="ajustes">⚙️<span>Ajustes</span></button>
+</nav>
+
+<script src="foods.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
