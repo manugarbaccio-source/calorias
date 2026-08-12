@@ -94,6 +94,78 @@ h3 { font-size: 0.95rem; margin: 1.4rem 0 0.4rem; }
 .resumen-texto p { margin: 0.2rem 0; }
 #resumen-restante { color: var(--texto-suave); font-size: 0.9rem; }
 
+/* ── vasito de agua ── */
+.tarjeta-agua {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+#btn-agua {
+  position: relative;
+  width: 72px;
+  height: 96px;
+  flex-shrink: 0;
+  padding: 0;
+  background: transparent;
+  border: 3px solid #4fc3f7;
+  border-top-width: 2px;
+  border-radius: 6px 6px 22px 22px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+#btn-agua:active { transform: scale(0.92); }
+#btn-agua.brindis { animation: brindis 0.5s; }
+@keyframes brindis {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.12) rotate(-4deg); }
+  70% { transform: scale(1.06) rotate(3deg); }
+  100% { transform: scale(1); }
+}
+#agua-nivel {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 0%;
+  background: linear-gradient(180deg, #4fc3f7 0%, #0288d1 100%);
+  transition: height 0.5s ease;
+}
+#agua-nivel::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -10%;
+  width: 120%;
+  height: 10px;
+  background: #81d4fa;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.vaso-texto {
+  position: relative;
+  z-index: 1;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--texto);
+  text-shadow: 0 1px 3px rgba(255,255,255,0.5);
+}
+@media (prefers-color-scheme: dark) {
+  .vaso-texto { text-shadow: 0 1px 3px rgba(0,0,0,0.7); }
+}
+.agua-info { flex: 1; }
+.agua-info p { margin: 0.2rem 0; }
+#agua-total { font-weight: 700; font-size: 1.05rem; }
+#agua-total.cumplido { color: #0288d1; }
+.btn-chico { font-size: 0.75rem; padding: 0.35rem 0.6rem; margin-top: 0.3rem; }
+
+.fila-hora { align-items: center; margin-top: 0.6rem; }
+.fila-hora label { margin: 0; font-weight: 400; font-size: 0.9rem; color: var(--texto-suave); white-space: nowrap; }
+.fila-hora input[type="time"] { max-width: 130px; }
+
 /* ── formularios ── */
 label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
 input, select {

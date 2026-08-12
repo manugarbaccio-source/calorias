@@ -228,6 +228,36 @@ let comidasCache = [];
 
 const $ = (sel) => document.querySelector(sel);
 
+/* ── agua ── */
+const AGUA_NOMBRE = "💧 Agua";
+const esAgua = (c) => c.nombre === AGUA_NOMBRE;
+
+function horaDe(c) {
+  const d = new Date(c.creado);
+  if (isNaN(d)) return "";
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+}
+
+function ahoraHHMM() {
+  const d = new Date();
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+}
+
+function renderAgua() {
+  const objetivo = config.objetivoAgua || 3;
+  const litros = comidasCache.filter(c => c.fecha === hoyStr() && esAgua(c))
+    .reduce((s, c) => s + Number(c.gramos), 0) / 1000;
+  const pct = Math.min(100, Math.round(litros / objetivo * 100));
+  $("#agua-nivel").style.height = pct + "%";
+  const total = $("#agua-total");
+  total.textContent = `💧 ${litros % 1 === 0 ? litros : litros.toFixed(1)} L / ${objetivo} L`;
+  total.classList.toggle("cumplido", litros >= objetivo);
+  $("#agua-mensaje").textContent = litros >= objetivo
+    ? "¡Objetivo cumplido! 🎉 Seguí si tenés sed"
+    : (litros === 0 ? "Tocá el vaso cada vez que tomes medio litro"
+       : `Te falta${objetivo - litros === 0.5 ? "" : "n"} ${(objetivo - litros) % 1 === 0 ? (objetivo - litros) : (objetivo - litros).toFixed(1)} L`);
+}
+
 function kcalDeItem(item) {
   const c = item.candidatos[item.elegido ?? 0];
   if (!c) return 0;
@@ -278,8 +308,10 @@ function actualizarKcalItem(i) {
 }
 
 async function renderHoy() {
+  renderAgua();
   const hoy = hoyStr();
-  const deHoy = comidasCache.filter(c => c.fecha === hoy);
+  const deHoy = comidasCache.filter(c => c.fecha === hoy && !esAgua(c))
+    .sort((a, b) => (a.creado || "").localeCompare(b.creado || ""));
   const total = deHoy.reduce((s, c) => s + c.kcal, 0);
   $("#kcal-hoy").textContent = Math.round(total);
 
@@ -298,8 +330,9 @@ async function renderHoy() {
   for (const c of deHoy) {
     const div = document.createElement("div");
     div.className = "item";
+    const hora = horaDe(c);
     div.innerHTML = `
-      <span class="nombre">${c.nombre}<span class="detalle">${Math.round(c.gramos)} g</span></span>
+      <span class="nombre">${c.nombre}<span class="detalle">${hora ? "🕐 " + hora + " · " : ""}${Math.round(c.gramos)} g</span></span>
       <span class="kcal">${Math.round(c.kcal)} kcal</span>
       <button data-id="${c.id}" title="Borrar">🗑️</button>`;
     div.querySelector("button").addEventListener("click", async () => {
@@ -320,15 +353,19 @@ function renderHistorial() {
   cont.innerHTML = fechas.length ? "" : `<p class="vacio">Sin registros todavía.</p>`;
   const objetivo = config.objetivo || 0;
   for (const fecha of fechas) {
-    const comidas = porDia[fecha];
+    const todas = porDia[fecha];
+    const comidas = todas.filter(c => !esAgua(c))
+      .sort((a, b) => (a.creado || "").localeCompare(b.creado || ""));
+    const litros = todas.filter(esAgua).reduce((s, c) => s + Number(c.gramos), 0) / 1000;
     const total = Math.round(comidas.reduce((s, c) => s + c.kcal, 0));
     const det = document.createElement("details");
     det.className = "dia-historial";
     const pct = objetivo ? Math.min(100, Math.round(total / objetivo * 100)) : 0;
+    const litrosTxt = litros ? ` · 💧 ${litros % 1 === 0 ? litros : litros.toFixed(1)} L` : "";
     det.innerHTML = `
-      <summary><span>${fechaLinda(fecha)}</span><span>${total} kcal</span></summary>
+      <summary><span>${fechaLinda(fecha)}</span><span>${total} kcal${litrosTxt}</span></summary>
       ${objetivo ? `<div class="barra"><div style="width:${pct}%" class="${total > objetivo ? "excedido" : ""}"></div></div>` : ""}
-      <ul>${comidas.map(c => `<li>${c.nombre} — ${Math.round(c.kcal)} kcal</li>`).join("")}</ul>`;
+      <ul>${comidas.map(c => `<li>${horaDe(c) ? horaDe(c) + " — " : ""}${c.nombre} — ${Math.round(c.kcal)} kcal</li>`).join("")}</ul>`;
     cont.appendChild(det);
   }
 }
@@ -374,6 +411,7 @@ $("#form-comida").addEventListener("submit", (e) => {
   const texto = $("#input-comida").value;
   pendientes = parsearEntrada(texto);
   if (!pendientes.length) return;
+  $("#hora-comida").value = ahoraHHMM();
   renderResultados();
 });
 
@@ -426,6 +464,15 @@ $("#lista-resultados").addEventListener("click", async (e) => {
 
 // confirmar
 $("#btn-confirmar").addEventListener("click", async () => {
+  // la hora elegida define el "creado" (para ver a qué hora comiste)
+  let creadoISO = new Date().toISOString();
+  const horaVal = $("#hora-comida").value;
+  if (horaVal) {
+    const [h, m] = horaVal.split(":").map(Number);
+    const d = new Date();
+    d.setHours(h, m, 0, 0);
+    creadoISO = d.toISOString();
+  }
   const nuevas = pendientes
     .filter(it => it.candidatos.length && it.gramos > 0)
     .map(it => {
@@ -436,7 +483,7 @@ $("#btn-confirmar").addEventListener("click", async () => {
         nombre: alim.n,
         gramos: it.gramos,
         kcal: Math.round(alim.k * it.gramos / 100),
-        creado: new Date().toISOString(),
+        creado: creadoISO,
       };
     });
   if (!nuevas.length) return;
@@ -455,6 +502,34 @@ $("#btn-confirmar").addEventListener("click", async () => {
 $("#btn-cancelar").addEventListener("click", () => {
   pendientes = [];
   renderResultados();
+});
+
+// vasito de agua
+$("#btn-agua").addEventListener("click", async () => {
+  const entrada = {
+    id: uuid(), fecha: hoyStr(), nombre: AGUA_NOMBRE,
+    gramos: 500, kcal: 0, creado: new Date().toISOString(),
+  };
+  try {
+    await storeActivo().agregarComidas([entrada]);
+  } catch (err) { alert("Error guardando: " + err.message); return; }
+  comidasCache.push(entrada);
+  const btn = $("#btn-agua");
+  btn.classList.remove("brindis");
+  void btn.offsetWidth; // reinicia la animación
+  btn.classList.add("brindis");
+  renderAgua(); renderHistorial();
+});
+
+$("#btn-agua-menos").addEventListener("click", async () => {
+  const deHoy = comidasCache.filter(c => c.fecha === hoyStr() && esAgua(c));
+  if (!deHoy.length) return;
+  const ultima = deHoy[deHoy.length - 1];
+  try {
+    await storeActivo().borrarComida(ultima.id);
+  } catch (err) { alert("Error: " + err.message); return; }
+  comidasCache = comidasCache.filter(c => c.id !== ultima.id);
+  renderAgua(); renderHistorial();
 });
 
 // alimentos propios
@@ -479,6 +554,15 @@ $("#form-alimento").addEventListener("submit", async (e) => {
 // ajustes
 $("#btn-guardar-objetivo").addEventListener("click", (e) => {
   config.objetivo = Number($("#cfg-objetivo").value) || 0;
+  guardarConfig();
+  renderHoy(); renderHistorial();
+  const btn = e.target;
+  btn.textContent = "Guardado ✓";
+  setTimeout(() => { btn.textContent = "Guardar"; }, 1500);
+});
+
+$("#btn-guardar-agua").addEventListener("click", (e) => {
+  config.objetivoAgua = Number($("#cfg-agua").value) || 3;
   guardarConfig();
   renderHoy(); renderHistorial();
   const btn = e.target;
@@ -559,6 +643,7 @@ async function cargarDatos() {
 
 (function init() {
   if (config.objetivo) $("#cfg-objetivo").value = config.objetivo;
+  $("#cfg-agua").value = config.objetivoAgua || 3;
   if (config.supabaseUrl) $("#cfg-supa-url").value = config.supabaseUrl;
   if (config.supabaseKey) $("#cfg-supa-key").value = config.supabaseKey;
   actualizarBadge();
