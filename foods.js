@@ -84,6 +84,8 @@ const BASE_ALIMENTOS = [
   { n: "Queso port salut", a: ["queso", "queso cremoso"], k: 300, p: 30, u: "1 feta gruesa" },
   { n: "Queso rallado", a: [], k: 400, p: 10, u: "1 cucharada" },
   { n: "Yogur entero", a: ["yogur", "yogurt"], k: 80, p: 190, u: "1 pote" },
+  { n: "Yogur Tregar con frutas (entero, arándano)", a: ["yogur tregar", "yogur de arandanos", "yogur arandano", "yogur con frutas", "tregar arandano"], k: 106, p: 150, u: "1 pote (150 g · 159 kcal)" },
+  { n: "Yogur Tregar Tops con copos y miel (descremado)", a: ["yogur tops", "tops", "tregar tops", "yogur con copos", "yogur con cereales", "yogur descremado con copos"], k: 76, p: 164, u: "1 vaso (164 g · 125 kcal)" },
   { n: "Yogur descremado", a: ["yogur light", "ser"], k: 45, p: 190, u: "1 pote" },
   { n: "Leche entera", a: ["leche", "vaso de leche"], k: 60, p: 200, u: "1 vaso" },
   { n: "Leche descremada", a: [], k: 35, p: 200, u: "1 vaso" },
