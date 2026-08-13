@@ -20,6 +20,12 @@ CFG = json.load(open(os.path.join(BASE, "config.json"), encoding="utf-8"))
 TOKENS = os.path.expanduser(CFG.get("token_dir", "~/.garmin_tokens"))
 
 
+def guardar_tokens(g):
+    # según la versión de garminconnect el cliente garth vive en .garth o .client
+    cliente = getattr(g, "garth", None) or getattr(g, "client", None)
+    cliente.dump(TOKENS)
+
+
 def login():
     import getpass
     email = input("Email de Garmin: ").strip()
@@ -29,7 +35,7 @@ def login():
     if res1 == "needs_mfa":
         codigo = input("Código de verificación (MFA): ").strip()
         g.resume_login(res2, codigo)
-    g.garth.dump(TOKENS)
+    guardar_tokens(g)
     print("Login OK. Tokens guardados en", TOKENS)
 
 
@@ -62,7 +68,7 @@ def sync():
         if res1 == "needs_mfa":
             raise SystemExit("La cuenta de Garmin tiene verificación en dos pasos: "
                              "desactivala o usá el login interactivo.")
-        g.garth.dump(TOKENS)
+        guardar_tokens(g)
         print("Login nuevo OK, tokens guardados.")
     filas = []
     for delta in (0, 1):  # hoy y ayer (por si el reloj sincronizó tarde)

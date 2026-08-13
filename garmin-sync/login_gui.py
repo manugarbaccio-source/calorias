@@ -58,7 +58,7 @@ def conectar():
                 while codigo is None:
                     ventana.update()
                 g.resume_login(res2, codigo.strip())
-            g.garth.dump(sincronizador.TOKENS)
+            sincronizador.guardar_tokens(g)
             ventana.after(0, lambda: estado.config(text="✓ Conectado. Probando sincronización…", fg="#2e7d32"))
             sincronizador.sync()
             ventana.after(0, lambda: estado.config(
