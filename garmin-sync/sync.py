@@ -70,6 +70,9 @@ def sync():
                              "desactivala o usá el login interactivo.")
         guardar_tokens(g)
         print("Login nuevo OK, tokens guardados.")
+        # reentrar con los tokens: el login "fresco" no completa el perfil
+        g = Garmin()
+        g.login(TOKENS)
     filas = []
     for delta in (0, 1):  # hoy y ayer (por si el reloj sincronizó tarde)
         fecha = (datetime.date.today() - datetime.timedelta(days=delta)).isoformat()
