@@ -699,12 +699,12 @@ $("#btn-guardar-supa").addEventListener("click", async () => {
   actualizarBadge();
 });
 
-$("#btn-migrar").addEventListener("click", async () => {
+async function migrarLocalANube(preguntar = true) {
   if (!config.supabaseUrl) { alert("Primero conectá Supabase."); return; }
   const comidas = await StoreLocal.listarComidas();
   const alimentos = await StoreLocal.listarAlimentos();
-  if (!comidas.length && !alimentos.length) { alert("No hay datos locales para subir."); return; }
-  if (!confirm(`Subir ${comidas.length} comidas y ${alimentos.length} alimentos a la nube?`)) return;
+  if (!comidas.length && !alimentos.length) { if (preguntar) alert("No hay datos locales para subir."); return; }
+  if (preguntar && !confirm(`Subir ${comidas.length} comidas y ${alimentos.length} alimentos a la nube?`)) return;
   try {
     if (alimentos.length) await StoreSupabase._fetch("alimentos?on_conflict=id", {
       method: "POST", body: JSON.stringify(alimentos),
@@ -714,10 +714,12 @@ $("#btn-migrar").addEventListener("click", async () => {
       method: "POST", body: JSON.stringify(comidas),
       headers: { Prefer: "resolution=merge-duplicates,return=representation" },
     });
-    alert("Datos subidos ✓");
+    alert("Datos subidos a la nube ✓");
     await cargarDatos();
   } catch (err) { alert("Error subiendo: " + err.message); }
-});
+}
+
+$("#btn-migrar").addEventListener("click", () => migrarLocalANube(true));
 
 $("#btn-exportar").addEventListener("click", async () => {
   const datos = {
@@ -748,6 +750,23 @@ async function cargarDatos() {
 }
 
 (function init() {
+  // configuración por link: abrir la app con #cfg=URL|CLAVE la conecta a la nube
+  // sin tipear nada (el hash se borra de la barra y no viaja a ningún servidor)
+  if (location.hash.startsWith("#cfg=")) {
+    const [u, k] = decodeURIComponent(location.hash.slice(5)).split("|");
+    if (u && k) {
+      config.supabaseUrl = u.replace(/\/$/, "");
+      config.supabaseKey = k.trim();
+      guardarConfig();
+      history.replaceState(null, "", location.pathname + location.search);
+      setTimeout(async () => {
+        const locales = await StoreLocal.listarComidas();
+        if (locales.length && confirm(`✓ Conectado a la nube.\n\nEste dispositivo tiene ${locales.length} registros guardados localmente. ¿Los subimos a la nube así no se pierden?`)) {
+          await migrarLocalANube(false);
+        }
+      }, 800);
+    }
+  }
   if (config.objetivo) $("#cfg-objetivo").value = config.objetivo;
   $("#cfg-agua").value = config.objetivoAgua || 3;
   if (config.supabaseUrl) $("#cfg-supa-url").value = config.supabaseUrl;
