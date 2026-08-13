@@ -1,0 +1,35 @@
+name: Sincronizar Garmin
+
+on:
+  schedule:
+    - cron: "10 * * * *"   # cada hora, minuto 10
+  workflow_dispatch:        # y a mano desde la pestaña Actions
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install garminconnect requests
+
+      - name: Restaurar tokens de Garmin
+        run: |
+          mkdir -p ~/.garmin_tokens
+          echo "${{ secrets.GARTH_TOKENS }}" | base64 -d | tar -xz -C ~/.garmin_tokens
+
+      - name: Escribir configuración
+        run: |
+          cat > garmin-sync/config.json <<EOF
+          {"supabase_url": "${{ secrets.SUPABASE_URL }}", "supabase_key": "${{ secrets.SUPABASE_KEY }}", "token_dir": "~/.garmin_tokens"}
+          EOF
+
+      - name: Sincronizar
+        env:
+          TZ: America/Argentina/Buenos_Aires
+        run: python garmin-sync/sync.py
