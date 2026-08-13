@@ -443,7 +443,7 @@ async function renderHoy() {
     div.className = "item";
     const hora = horaDe(c);
     div.innerHTML = `
-      <span class="nombre">${c.nombre}<span class="detalle">${hora ? "🕐 " + hora + " · " : ""}${Math.round(c.gramos)} g</span></span>
+      <span class="nombre">${c.nombre}<span class="detalle"><button class="btn-hora" title="Corregir la hora">🕐 ${hora || "--:--"}</button> · ${Math.round(c.gramos)} g</span></span>
       <button class="btn-paso it-menos" title="Una porción menos">−</button>
       <button class="btn-paso it-mas" title="Una porción más">+</button>
       <span class="kcal">${Math.round(c.kcal)} kcal</span>
@@ -465,6 +465,30 @@ async function renderHoy() {
       }
       renderHoy(); renderHistorial();
     };
+    div.querySelector(".btn-hora").addEventListener("click", () => {
+      const btn = div.querySelector(".btn-hora");
+      const input = document.createElement("input");
+      input.type = "time";
+      input.className = "input-hora";
+      input.value = hora || ahoraHHMM();
+      btn.replaceWith(input);
+      input.focus();
+      let aplicado = false;
+      const aplicar = async () => {
+        if (aplicado) return;
+        aplicado = true;
+        if (input.value && input.value !== hora) {
+          const [h, m] = input.value.split(":").map(Number);
+          const [y, mes, d] = c.fecha.split("-").map(Number);
+          const nuevo = new Date(y, mes - 1, d, h, m, 0, 0).toISOString();
+          try { await storeActivo().actualizarComida(c.id, { creado: nuevo }); c.creado = nuevo; }
+          catch (err) { alert("Error: " + err.message); }
+        }
+        renderHoy(); renderHistorial();
+      };
+      input.addEventListener("change", aplicar);
+      input.addEventListener("blur", aplicar);
+    });
     div.querySelector(".it-menos").addEventListener("click", () => ajustar(-1));
     div.querySelector(".it-mas").addEventListener("click", () => ajustar(1));
     div.querySelector(".it-borrar").addEventListener("click", async () => {

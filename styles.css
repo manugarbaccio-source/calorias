@@ -179,6 +179,19 @@ h3 { font-size: 0.95rem; margin: 1.4rem 0 0.4rem; }
 #agua-total.cumplido { color: #0288d1; }
 .btn-chico { font-size: 0.75rem; padding: 0.35rem 0.6rem; margin-top: 0.3rem; }
 
+/* hora editable en la lista */
+.btn-hora {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: var(--texto-suave);
+  text-decoration: underline dotted;
+  cursor: pointer;
+  font-weight: 400;
+}
+.input-hora { max-width: 110px; padding: 0.2rem 0.4rem; font-size: 0.85rem; margin: 0; }
+
 /* botones −/+ de porciones */
 .btn-paso {
   width: 34px;
