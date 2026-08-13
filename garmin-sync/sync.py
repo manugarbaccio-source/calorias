@@ -73,6 +73,11 @@ def sync():
         # reentrar con los tokens: el login "fresco" no completa el perfil
         g = Garmin()
         g.login(TOKENS)
+    try:
+        for d in (g.get_devices() or []):
+            print(f"[debug] dispositivo: {d.get('productDisplayName')} · ultima sync: {d.get('lastUploadStart') or d.get('uploadDate')}")
+    except Exception as e:
+        print("[debug] no pude listar dispositivos:", e)
     filas = []
     for delta in (0, 1):  # hoy y ayer (por si el reloj sincronizó tarde)
         fecha = (datetime.date.today() - datetime.timedelta(days=delta)).isoformat()
