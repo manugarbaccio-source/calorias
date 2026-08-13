@@ -179,6 +179,22 @@ h3 { font-size: 0.95rem; margin: 1.4rem 0 0.4rem; }
 #agua-total.cumplido { color: #0288d1; }
 .btn-chico { font-size: 0.75rem; padding: 0.35rem 0.6rem; margin-top: 0.3rem; }
 
+/* botones −/+ de porciones */
+.btn-paso {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: var(--verde-claro);
+  color: var(--verde);
+  border: 1px solid var(--borde);
+  flex-shrink: 0;
+  align-self: center;
+}
+.cant-num { align-self: center; font-weight: 700; min-width: 1.4rem; text-align: center; }
+
 .fila-hora { align-items: center; margin-top: 0.6rem; }
 .fila-hora label { margin: 0; font-weight: 400; font-size: 0.9rem; color: var(--texto-suave); white-space: nowrap; }
 .fila-hora input[type="time"] { max-width: 130px; }

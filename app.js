@@ -58,6 +58,11 @@ const StoreLocal = {
   async borrarComida(id) {
     this._escribir("cc_entries", this._leer("cc_entries").filter(e => e.id !== id));
   },
+  async actualizarComida(id, campos) {
+    const arr = this._leer("cc_entries");
+    const i = arr.findIndex(e => e.id === id);
+    if (i !== -1) { Object.assign(arr[i], campos); this._escribir("cc_entries", arr); }
+  },
 };
 
 const StoreSupabase = {
@@ -83,6 +88,7 @@ const StoreSupabase = {
   async listarComidas() { return this._fetch("comidas?select=*&order=fecha.desc,creado.desc&limit=1000"); },
   async agregarComidas(arr) { await this._fetch("comidas", { method: "POST", body: JSON.stringify(arr) }); },
   async borrarComida(id) { await this._fetch(`comidas?id=eq.${id}`, { method: "DELETE" }); },
+  async actualizarComida(id, campos) { await this._fetch(`comidas?id=eq.${id}`, { method: "PATCH", body: JSON.stringify(campos) }); },
 };
 
 function storeActivo() {
@@ -243,6 +249,34 @@ function ahoraHHMM() {
   return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
 }
 
+/* ── actividad de Garmin (pasos y calorías quemadas) ── */
+let actividadHoy = null;
+
+async function cargarActividad() {
+  if (storeActivo() !== StoreSupabase) return;
+  try {
+    const filas = await StoreSupabase._fetch(`actividad?fecha=eq.${hoyStr()}`);
+    actividadHoy = (filas && filas[0]) || null;
+  } catch { actividadHoy = null; }
+  renderActividad();
+}
+
+function renderActividad() {
+  const cont = $("#tarjeta-actividad");
+  if (!cont) return;
+  if (!actividadHoy || (!Number(actividadHoy.pasos) && !Number(actividadHoy.kcal_totales))) {
+    cont.classList.add("oculto");
+    return;
+  }
+  cont.classList.remove("oculto");
+  const consumidas = Math.round(comidasCache.filter(c => c.fecha === hoyStr() && !esAgua(c)).reduce((s, c) => s + Number(c.kcal), 0));
+  const quemadas = Math.round(Number(actividadHoy.kcal_totales));
+  const balance = consumidas - quemadas;
+  cont.innerHTML = `<span class="icono">👟</span><div>
+    <p class="horas">${Number(actividadHoy.pasos).toLocaleString("es-AR")} pasos · 🔥 ${quemadas.toLocaleString("es-AR")} kcal quemadas</p>
+    <p class="detalle-ayuno">Balance: ${consumidas} comidas − ${quemadas} quemadas = <b>${balance > 0 ? "+" : ""}${balance} kcal</b> · vía Garmin</p></div>`;
+}
+
 /* ── ayuno ── */
 // El ayuno arranca en la última comida registrada DESPUÉS de las 19 hs (la cena).
 // El agua no lo corta; cualquier comida posterior sí.
@@ -324,9 +358,12 @@ function renderResultados() {
           <select class="sel-candidato" data-i="${i}">${opciones}</select>
         </div>
         <div class="fila-input">
+          <button class="btn-secundario btn-paso cant-menos" data-i="${i}" title="Una porción menos">−</button>
+          <span class="cant-num" data-i="${i}">${item.cantidad}</span>
+          <button class="btn-secundario btn-paso cant-mas" data-i="${i}" title="Una porción más">+</button>
           <input type="number" class="gramos" data-i="${i}" value="${item.gramos}" min="1" step="5"> <span style="align-self:center">g</span>
           <span class="kcal-item" data-i="${i}">${kcalDeItem(item)} kcal</span>
-          <button class="btn-secundario btn-off" data-i="${i}">Buscar más 🔎</button>
+          <button class="btn-secundario btn-off" data-i="${i}">🔎</button>
           <button class="btn-secundario btn-quitar" data-i="${i}" title="No agregar">✕</button>
         </div>` : `
         <p class="sin-match">No lo encontré en la base.</p>
@@ -348,6 +385,7 @@ function actualizarKcalItem(i) {
 async function renderHoy() {
   renderAgua();
   renderAyuno();
+  renderActividad();
   const hoy = hoyStr();
   const deHoy = comidasCache.filter(c => c.fecha === hoy && !esAgua(c))
     .sort((a, b) => (a.creado || "").localeCompare(b.creado || ""));
@@ -372,9 +410,30 @@ async function renderHoy() {
     const hora = horaDe(c);
     div.innerHTML = `
       <span class="nombre">${c.nombre}<span class="detalle">${hora ? "🕐 " + hora + " · " : ""}${Math.round(c.gramos)} g</span></span>
+      <button class="btn-paso it-menos" title="Una porción menos">−</button>
+      <button class="btn-paso it-mas" title="Una porción más">+</button>
       <span class="kcal">${Math.round(c.kcal)} kcal</span>
-      <button data-id="${c.id}" title="Borrar">🗑️</button>`;
-    div.querySelector("button").addEventListener("click", async () => {
+      <button class="it-borrar" data-id="${c.id}" title="Borrar">🗑️</button>`;
+    const ajustar = async (paso) => {
+      const base = Number(c.base) || Number(c.gramos) || 0;
+      if (!base) return;
+      const nuevosG = Number(c.gramos) + paso * base;
+      if (nuevosG <= 0) {
+        if (!confirm(`¿Borrar "${c.nombre}"?`)) return;
+        await storeActivo().borrarComida(c.id);
+        comidasCache = comidasCache.filter(x => x.id !== c.id);
+      } else {
+        const kcalPorG = Number(c.kcal) / Number(c.gramos);
+        const campos = { gramos: nuevosG, kcal: Math.round(kcalPorG * nuevosG) };
+        try { await storeActivo().actualizarComida(c.id, campos); }
+        catch (err) { alert("Error: " + err.message); return; }
+        Object.assign(c, campos);
+      }
+      renderHoy(); renderHistorial();
+    };
+    div.querySelector(".it-menos").addEventListener("click", () => ajustar(-1));
+    div.querySelector(".it-mas").addEventListener("click", () => ajustar(1));
+    div.querySelector(".it-borrar").addEventListener("click", async () => {
       if (!confirm(`¿Borrar "${c.nombre}"?`)) return;
       await storeActivo().borrarComida(c.id);
       comidasCache = comidasCache.filter(x => x.id !== c.id);
@@ -480,6 +539,12 @@ $("#lista-resultados").addEventListener("click", async (e) => {
   if (btn.classList.contains("btn-quitar")) {
     pendientes.splice(i, 1);
     renderResultados();
+  } else if (btn.classList.contains("cant-mas") || btn.classList.contains("cant-menos")) {
+    const it = pendientes[i];
+    const paso = btn.classList.contains("cant-mas") ? 1 : -1;
+    it.cantidad = Math.max(it.cantidad <= 1 && paso === -1 ? 0.5 : 1, it.cantidad + paso);
+    it.gramos = Math.round(it.candidatos[it.elegido ?? 0].alimento.p * it.cantidad);
+    renderResultados();
   } else if (btn.classList.contains("btn-off")) {
     btn.textContent = "Buscando…";
     btn.disabled = true;
@@ -522,6 +587,7 @@ $("#btn-confirmar").addEventListener("click", async () => {
         nombre: alim.n,
         gramos: it.gramos,
         kcal: Math.round(alim.k * it.gramos / 100),
+        base: alim.p, // gramos de UNA porción, para los botones −/+
         creado: creadoISO,
       };
     });
@@ -678,6 +744,7 @@ async function cargarDatos() {
     misAlimentos = []; comidasCache = [];
   }
   renderHoy(); renderHistorial(); renderAlimentos();
+  cargarActividad();
 }
 
 (function init() {

@@ -59,6 +59,8 @@ const BASE_ALIMENTOS = [
   { n: "Papas fritas", a: ["fritas", "papafritas"], k: 310, p: 150, u: "1 porción" },
   { n: "Puré de papa", a: ["pure", "pure de papas"], k: 100, p: 200, u: "1 porción" },
   { n: "Papa al horno", a: ["papas al horno"], k: 110, p: 200, u: "1 porción" },
+  { n: "Batata / boniato asado", a: ["batata", "boniato", "boniatos", "batatas", "boniatos asados", "batatas asadas", "boniato asado", "batata asada"], k: 100, p: 200, u: "1 porción" },
+  { n: "Puré de calabaza", a: ["pure de zapallo", "pure de calabaza"], k: 60, p: 200, u: "1 porción" },
   { n: "Ensalada mixta (lechuga y tomate)", a: ["ensalada", "ensalada mixta"], k: 20, p: 150, u: "1 plato (sin aceite)" },
   { n: "Ensalada rusa", a: [], k: 140, p: 200, u: "1 porción" },
   { n: "Ensalada César", a: ["ensalada cesar"], k: 150, p: 250, u: "1 plato" },

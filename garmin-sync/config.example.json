@@ -1,0 +1,5 @@
+{
+  "supabase_url": "https://TU-PROYECTO.supabase.co",
+  "supabase_key": "sb_publishable_...",
+  "token_dir": "~/.garmin_tokens"
+}
