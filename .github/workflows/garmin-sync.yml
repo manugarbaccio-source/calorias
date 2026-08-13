@@ -18,10 +18,11 @@ jobs:
       - name: Instalar dependencias
         run: pip install garminconnect requests
 
-      - name: Restaurar tokens de Garmin
-        run: |
-          mkdir -p ~/.garmin_tokens
-          echo "${{ secrets.GARTH_TOKENS }}" | base64 -d | tar -xz -C ~/.garmin_tokens
+      - name: Recuperar tokens de Garmin (cache)
+        uses: actions/cache@v4
+        with:
+          path: ~/.garmin_tokens
+          key: garmin-tokens-v1
 
       - name: Escribir configuración
         run: |
@@ -32,4 +33,6 @@ jobs:
       - name: Sincronizar
         env:
           TZ: America/Argentina/Buenos_Aires
+          GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
         run: python garmin-sync/sync.py

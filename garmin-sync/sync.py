@@ -50,7 +50,20 @@ def subir(filas):
 
 def sync():
     g = Garmin()
-    g.login(TOKENS)
+    try:
+        g.login(TOKENS)  # tokens guardados (local o cache de Actions)
+    except Exception:
+        email = os.environ.get("GARMIN_EMAIL")
+        password = os.environ.get("GARMIN_PASSWORD")
+        if not (email and password):
+            raise
+        g = Garmin(email=email, password=password, return_on_mfa=True)
+        res1, res2 = g.login()
+        if res1 == "needs_mfa":
+            raise SystemExit("La cuenta de Garmin tiene verificación en dos pasos: "
+                             "desactivala o usá el login interactivo.")
+        g.garth.dump(TOKENS)
+        print("Login nuevo OK, tokens guardados.")
     filas = []
     for delta in (0, 1):  # hoy y ayer (por si el reloj sincronizó tarde)
         fecha = (datetime.date.today() - datetime.timedelta(days=delta)).isoformat()
