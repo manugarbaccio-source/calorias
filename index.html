@@ -32,6 +32,8 @@
       </div>
     </div>
 
+    <div class="tarjeta-ayuno oculto" id="tarjeta-proxima"></div>
+
     <div class="tarjeta-ayuno oculto" id="tarjeta-actividad"></div>
 
     <div class="tarjeta-ayuno" id="tarjeta-ayuno"></div>
@@ -114,6 +116,14 @@
     <div class="fila-input">
       <input type="number" id="cfg-agua" placeholder="litros por día (ej: 3)" min="0.5" step="0.5">
       <button id="btn-guardar-agua" class="btn-primario">Guardar</button>
+    </div>
+
+    <h3>Comer cada cuántas horas</h3>
+    <p class="ayuda">Después de cada comida arranca la cuenta regresiva hasta la próxima.
+      Si un día tenés media mañana o media tarde, cambialo acá (ej: 4).</p>
+    <div class="fila-input">
+      <input type="number" id="cfg-intervalo" placeholder="horas (ej: 3)" min="1" max="8" step="0.5">
+      <button id="btn-guardar-intervalo" class="btn-primario">Guardar</button>
     </div>
 
     <h3>Supabase (nube)</h3>

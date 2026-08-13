@@ -277,6 +277,39 @@ function renderActividad() {
     <p class="detalle-ayuno">Balance: ${consumidas} comidas − ${quemadas} quemadas = <b>${balance > 0 ? "+" : ""}${balance} kcal</b> · vía Garmin</p></div>`;
 }
 
+/* ── próxima comida ── */
+// Cuenta regresiva desde la última comida del día hasta la siguiente
+// (intervalo configurable). Después de las 19 hs manda el contador de ayuno.
+function renderProximaComida() {
+  const cont = $("#tarjeta-proxima");
+  if (!cont) return;
+  const intervaloH = config.intervaloComidas || 3;
+  const deHoy = comidasCache.filter(c => c.fecha === hoyStr() && !esAgua(c) && c.creado)
+    .sort((a, b) => a.creado.localeCompare(b.creado));
+  const ultima = deHoy[deHoy.length - 1];
+  if (!ultima || new Date(ultima.creado).getHours() >= 19) {
+    cont.classList.add("oculto");
+    return;
+  }
+  cont.classList.remove("oculto");
+  const objetivo = new Date(new Date(ultima.creado).getTime() + intervaloH * 3600e3);
+  const diffMin = Math.round((objetivo - new Date()) / 60000);
+  const fmt = (mins) => {
+    const h = Math.floor(Math.abs(mins) / 60), m = Math.abs(mins) % 60;
+    return h ? `${h} h ${String(m).padStart(2, "0")} min` : `${m} min`;
+  };
+  const horaObjetivo = `${String(objetivo.getHours()).padStart(2, "0")}:${String(objetivo.getMinutes()).padStart(2, "0")}`;
+  if (diffMin > 0) {
+    cont.innerHTML = `<span class="icono">⏰</span><div>
+      <p class="horas">Próxima comida en ${fmt(diffMin)}</p>
+      <p class="detalle-ayuno">A las ${horaObjetivo} · comiste ${ultima.nombre} a las ${horaDe(ultima)} · cada ${intervaloH} h</p></div>`;
+  } else {
+    cont.innerHTML = `<span class="icono">🍽️</span><div>
+      <p class="horas" style="color:var(--naranja)">¡Ya te toca comer!</p>
+      <p class="detalle-ayuno">Pasaron ${fmt(intervaloH * 60 - diffMin)} desde ${ultima.nombre} (${horaDe(ultima)})${diffMin < -15 ? " · te pasaste " + fmt(diffMin) : ""}</p></div>`;
+  }
+}
+
 /* ── ayuno ── */
 // El ayuno arranca en la última comida registrada DESPUÉS de las 19 hs (la cena).
 // El agua no lo corta; cualquier comida posterior sí.
@@ -313,7 +346,7 @@ function renderAyuno() {
       <p class="detalle-ayuno">Desde las ${desde} (${cena.nombre})${aviso}</p></div>`;
   }
 }
-setInterval(renderAyuno, 60000); // se actualiza solo cada minuto
+setInterval(() => { renderAyuno(); renderProximaComida(); }, 60000); // se actualizan solos cada minuto
 
 function renderAgua() {
   const objetivo = config.objetivoAgua || 3;
@@ -385,6 +418,7 @@ function actualizarKcalItem(i) {
 async function renderHoy() {
   renderAgua();
   renderAyuno();
+  renderProximaComida();
   renderActividad();
   const hoy = hoyStr();
   const deHoy = comidasCache.filter(c => c.fecha === hoy && !esAgua(c))
@@ -675,6 +709,15 @@ $("#btn-guardar-agua").addEventListener("click", (e) => {
   setTimeout(() => { btn.textContent = "Guardar"; }, 1500);
 });
 
+$("#btn-guardar-intervalo").addEventListener("click", (e) => {
+  config.intervaloComidas = Number($("#cfg-intervalo").value) || 3;
+  guardarConfig();
+  renderProximaComida();
+  const btn = e.target;
+  btn.textContent = "Guardado ✓";
+  setTimeout(() => { btn.textContent = "Guardar"; }, 1500);
+});
+
 $("#btn-guardar-supa").addEventListener("click", async () => {
   const url = $("#cfg-supa-url").value.trim().replace(/\/$/, "");
   const key = $("#cfg-supa-key").value.trim();
@@ -769,6 +812,7 @@ async function cargarDatos() {
   }
   if (config.objetivo) $("#cfg-objetivo").value = config.objetivo;
   $("#cfg-agua").value = config.objetivoAgua || 3;
+  $("#cfg-intervalo").value = config.intervaloComidas || 3;
   if (config.supabaseUrl) $("#cfg-supa-url").value = config.supabaseUrl;
   if (config.supabaseKey) $("#cfg-supa-key").value = config.supabaseKey;
   actualizarBadge();
