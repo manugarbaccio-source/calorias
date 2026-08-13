@@ -77,6 +77,18 @@ def sync():
     for delta in (0, 1):  # hoy y ayer (por si el reloj sincronizó tarde)
         fecha = (datetime.date.today() - datetime.timedelta(days=delta)).isoformat()
         s = g.get_user_summary(cdate=fecha) or {}
+        # diagnóstico: hasta cuándo tiene datos la nube de Garmin
+        print(f"[debug] {fecha}: totalSteps={s.get('totalSteps')} "
+              f"wellnessEnd={s.get('wellnessEndTimeLocal')} "
+              f"lastSync={s.get('lastSyncTimestampGMT')}")
+        try:
+            pasos_detalle = g.get_steps_data(fecha)
+            suma = sum(p.get("steps") or 0 for p in (pasos_detalle or []))
+            print(f"[debug] {fecha}: suma del detalle de pasos = {suma}")
+            if suma > (s.get("totalSteps") or 0):
+                s["totalSteps"] = suma  # el detalle viene más fresco que el resumen
+        except Exception as e:
+            print("[debug] detalle de pasos falló:", e)
         filas.append({
             "fecha": fecha,
             "pasos": s.get("totalSteps") or 0,
