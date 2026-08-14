@@ -446,7 +446,7 @@ async function renderHoy() {
       <span class="nombre">${c.nombre}<span class="detalle"><button class="btn-hora" title="Corregir la hora">🕐 ${hora || "--:--"}</button> · ${Math.round(c.gramos)} g</span></span>
       <button class="btn-paso it-menos" title="Una porción menos">−</button>
       <button class="btn-paso it-mas" title="Una porción más">+</button>
-      <span class="kcal">${Math.round(c.kcal)} kcal</span>
+      <button class="kcal btn-kcal" title="Corregir las calorías">${Math.round(c.kcal)} kcal</button>
       <button class="it-borrar" data-id="${c.id}" title="Borrar">🗑️</button>`;
     const ajustar = async (paso) => {
       const base = Number(c.base) || Number(c.gramos) || 0;
@@ -488,6 +488,32 @@ async function renderHoy() {
       };
       input.addEventListener("change", aplicar);
       input.addEventListener("blur", aplicar);
+    });
+    div.querySelector(".btn-kcal").addEventListener("click", () => {
+      const btn = div.querySelector(".btn-kcal");
+      const input = document.createElement("input");
+      input.type = "number";
+      input.className = "input-kcal";
+      input.min = "0";
+      input.step = "5";
+      input.value = Math.round(c.kcal);
+      btn.replaceWith(input);
+      input.focus();
+      input.select();
+      let aplicado = false;
+      const aplicar = async () => {
+        if (aplicado) return;
+        aplicado = true;
+        const nuevo = Math.round(Number(input.value));
+        if (input.value !== "" && nuevo >= 0 && nuevo !== Math.round(c.kcal)) {
+          try { await storeActivo().actualizarComida(c.id, { kcal: nuevo }); c.kcal = nuevo; }
+          catch (err) { alert("Error: " + err.message); }
+        }
+        renderHoy(); renderHistorial();
+      };
+      input.addEventListener("change", aplicar);
+      input.addEventListener("blur", aplicar);
+      input.addEventListener("keydown", (ev) => { if (ev.key === "Enter") input.blur(); });
     });
     div.querySelector(".it-menos").addEventListener("click", () => ajustar(-1));
     div.querySelector(".it-mas").addEventListener("click", () => ajustar(1));
