@@ -152,6 +152,8 @@ const BASE_ALIMENTOS = [
   { n: "Mix de frutos secos", a: ["frutos secos", "nueces", "almendras"], k: 600, p: 30, u: "1 puñado" },
   { n: "Turrón de maní", a: ["turron"], k: 470, p: 25, u: "1 turrón" },
   { n: "Barrita de cereal", a: ["barrita", "cereal bar"], k: 400, p: 23, u: "1 barrita" },
+  { n: "Hydro Max isotónica (Nutremax)", a: ["hydro max", "hydromax", "isotonica", "bebida isotonica", "nutremax", "sport drink"], k: 376, p: 33, u: "1 sobre (rinde 500 ml · 124 kcal)" },
+  { n: "Energy Gel Mervick +3 (manzana)", a: ["energy gel", "gel energetico", "gel", "mervick", "gel mervick", "gel de manzana"], k: 290, p: 40, u: "1 gel (40 g · 116 kcal)" },
   { n: "Torta (porción)", a: ["torta", "torta de cumpleanos", "chocotorta"], k: 380, p: 100, u: "1 porción" },
   { n: "Flan con dulce de leche", a: ["flan"], k: 180, p: 150, u: "1 porción" },
   { n: "Gelatina", a: [], k: 60, p: 150, u: "1 porción" },
