@@ -63,6 +63,11 @@ const StoreLocal = {
     const i = arr.findIndex(e => e.id === id);
     if (i !== -1) { Object.assign(arr[i], campos); this._escribir("cc_entries", arr); }
   },
+  async actualizarAlimento(id, campos) {
+    const arr = this._leer("cc_foods");
+    const i = arr.findIndex(e => e.id === id);
+    if (i !== -1) { Object.assign(arr[i], campos); this._escribir("cc_foods", arr); }
+  },
 };
 
 const StoreSupabase = {
@@ -89,6 +94,7 @@ const StoreSupabase = {
   async agregarComidas(arr) { await this._fetch("comidas", { method: "POST", body: JSON.stringify(arr) }); },
   async borrarComida(id) { await this._fetch(`comidas?id=eq.${id}`, { method: "DELETE" }); },
   async actualizarComida(id, campos) { await this._fetch(`comidas?id=eq.${id}`, { method: "PATCH", body: JSON.stringify(campos) }); },
+  async actualizarAlimento(id, campos) { await this._fetch(`alimentos?id=eq.${id}`, { method: "PATCH", body: JSON.stringify(campos) }); },
 };
 
 function storeActivo() {
@@ -552,6 +558,23 @@ function renderHistorial() {
   }
 }
 
+// convierte un botón en un input inline; aplica al salir del campo o con Enter
+function edicionInline(boton, tipo, valor, alAplicar) {
+  const input = document.createElement("input");
+  input.type = tipo;
+  input.className = tipo === "text" ? "input-nombre" : "input-kcal";
+  if (tipo === "number") { input.min = "1"; input.step = "5"; }
+  input.value = valor;
+  boton.replaceWith(input);
+  input.focus();
+  input.select();
+  let hecho = false;
+  const aplicar = () => { if (hecho) return; hecho = true; alAplicar(input.value); };
+  input.addEventListener("change", aplicar);
+  input.addEventListener("blur", aplicar);
+  input.addEventListener("keydown", (ev) => { if (ev.key === "Enter") input.blur(); });
+}
+
 async function renderAlimentos() {
   const cont = $("#lista-alimentos");
   cont.innerHTML = misAlimentos.length ? "" : `<p class="vacio">Todavía no agregaste alimentos propios.</p>`;
@@ -559,9 +582,30 @@ async function renderAlimentos() {
     const div = document.createElement("div");
     div.className = "item";
     div.innerHTML = `
-      <span class="nombre">${f.nombre}<span class="detalle">${f.kcal100} kcal/100g · porción ${f.porcion} g</span></span>
-      <button data-id="${f.id}" title="Borrar">🗑️</button>`;
-    div.querySelector("button").addEventListener("click", async () => {
+      <span class="nombre"><button class="btn-editar-texto alim-nombre" title="Editar el nombre">${f.nombre}</button>
+        <span class="detalle"><button class="btn-editar-texto alim-kcal" title="Editar las calorías">${f.kcal100} kcal/100g</button> · porción ${f.porcion} g</span></span>
+      <button class="alim-borrar" data-id="${f.id}" title="Borrar">🗑️</button>`;
+    div.querySelector(".alim-nombre").addEventListener("click", (e) => {
+      edicionInline(e.target, "text", f.nombre, async (v) => {
+        const nuevo = v.trim();
+        if (nuevo && nuevo !== f.nombre) {
+          try { await storeActivo().actualizarAlimento(f.id, { nombre: nuevo }); f.nombre = nuevo; }
+          catch (err) { alert("Error: " + err.message); }
+        }
+        renderAlimentos();
+      });
+    });
+    div.querySelector(".alim-kcal").addEventListener("click", (e) => {
+      edicionInline(e.target, "number", f.kcal100, async (v) => {
+        const nuevo = Math.round(Number(v));
+        if (v !== "" && nuevo > 0 && nuevo !== f.kcal100) {
+          try { await storeActivo().actualizarAlimento(f.id, { kcal100: nuevo }); f.kcal100 = nuevo; }
+          catch (err) { alert("Error: " + err.message); }
+        }
+        renderAlimentos();
+      });
+    });
+    div.querySelector(".alim-borrar").addEventListener("click", async () => {
       if (!confirm(`¿Borrar "${f.nombre}"?`)) return;
       await storeActivo().borrarAlimento(f.id);
       misAlimentos = misAlimentos.filter(x => x.id !== f.id);
