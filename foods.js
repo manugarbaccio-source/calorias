@@ -86,6 +86,7 @@ const BASE_ALIMENTOS = [
   { n: "Yogur entero", a: ["yogur", "yogurt"], k: 80, p: 190, u: "1 pote" },
   { n: "Yogur Tregar con frutas (entero, arándano)", a: ["yogur tregar", "yogur de arandanos", "yogur arandano", "yogur con frutas", "tregar arandano"], k: 106, p: 150, u: "1 pote (150 g · 159 kcal)" },
   { n: "Yogur Dahi descremado con frutilla", a: ["yogur dahi", "dahi", "dahi frutilla", "yogur de frutilla", "yogur frutilla", "yogur descremado frutilla"], k: 96, p: 190, u: "1 pote (190 g · 182 kcal)" },
+  { n: "Yogur parfait grande (con granola y frutas)", a: ["parfait", "yogur parfait", "yogurt parfait", "yogur con granola", "parfait de frutas", "parfait grande"], k: 120, p: 320, u: "1 vaso grande (320 g · ~385 kcal)" },
   { n: "Yogur Tregar Tops con copos y miel (descremado)", a: ["yogur tops", "tops", "tregar tops", "yogur con copos", "yogur con cereales", "yogur descremado con copos"], k: 76, p: 164, u: "1 vaso (164 g · 125 kcal)" },
   { n: "Yogur descremado", a: ["yogur light", "ser"], k: 45, p: 190, u: "1 pote" },
   { n: "Leche entera", a: ["leche", "vaso de leche"], k: 60, p: 200, u: "1 vaso" },
