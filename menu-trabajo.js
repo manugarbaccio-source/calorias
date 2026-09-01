@@ -31,6 +31,7 @@ const CATEGORIAS_TRABAJO = {
 // d = fechas en que se sirve (para priorizar el plato de HOY en las búsquedas)
 const PLATOS_TRABAJO = [
 // 269 platos · semanas del 2026-07-28 al 2026-08-24 · generado por parse_menus.py
+  { n: "Pollo con jardinera de papa, zanahoria y choclo", cat: "Healthy Food", d: ["2026-08-14"] },
   { n: "Falafel vegano con emulsión de remolachas y zanahorias con sésamo", cat: "Plato Vegano Gourmet", d: ["2026-07-28"] },
   { n: "Omelette de choclo, morrón y queso", cat: "Tortilla y Omelette", d: ["2026-07-28"] },
   { n: "Clasic pulled chicken burger con queso, tomate y cebollas caramelizadas, acompañada de papas provenzal", cat: "Hamburguesa Especial", d: ["2026-07-28"] },
