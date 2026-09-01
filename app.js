@@ -30,6 +30,34 @@ function uuid() {
     : "xxxx-xxxx-xxxx".replace(/x/g, () => Math.floor(Math.random() * 16).toString(16));
 }
 
+/* ══════════════════ auto-actualización ══════════════════ */
+// Si el servidor tiene una versión más nueva, limpia cachés y recarga solo.
+const APP_VERSION = 18;
+
+async function chequearActualizacion() {
+  try {
+    const r = await fetch("version.json?ts=" + Date.now(), { cache: "no-store" });
+    const d = await r.json();
+    if (d.v > APP_VERSION && !sessionStorage.getItem("cc_actualizando")) {
+      sessionStorage.setItem("cc_actualizando", "1");
+      if ("serviceWorker" in navigator) {
+        const regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.map(x => x.unregister()));
+      }
+      if (window.caches) {
+        const ks = await caches.keys();
+        await Promise.all(ks.map(k => caches.delete(k)));
+      }
+      location.reload();
+    } else if (d.v <= APP_VERSION) {
+      sessionStorage.removeItem("cc_actualizando");
+    }
+  } catch { /* sin conexión: seguimos con lo que hay */ }
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") chequearActualizacion();
+});
+
 /* ══════════════════ configuración ══════════════════ */
 
 const config = JSON.parse(localStorage.getItem("cc_config") || "{}");
@@ -911,6 +939,7 @@ async function cargarDatos() {
   if (config.supabaseKey) $("#cfg-supa-key").value = config.supabaseKey;
   actualizarBadge();
   cargarDatos();
+  chequearActualizacion();
   if ("serviceWorker" in navigator && location.protocol !== "file:") {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
