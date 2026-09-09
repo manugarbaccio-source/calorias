@@ -32,7 +32,7 @@ function uuid() {
 
 /* ══════════════════ auto-actualización ══════════════════ */
 // Si el servidor tiene una versión más nueva, limpia cachés y recarga solo.
-const APP_VERSION = 20;
+const APP_VERSION = 21;
 
 async function chequearActualizacion() {
   try {
@@ -520,8 +520,10 @@ async function renderHoy() {
         }
         renderHoy(); renderHistorial();
       };
-      input.addEventListener("change", aplicar);
+      // ojo: nada de "change" acá — en un input de hora se dispara con el primer
+      // dígito tipeado y cerraba el campo antes de terminar de escribir
       input.addEventListener("blur", aplicar);
+      input.addEventListener("keydown", (ev) => { if (ev.key === "Enter") input.blur(); });
     });
     div.querySelector(".btn-kcal").addEventListener("click", () => {
       const btn = div.querySelector(".btn-kcal");
