@@ -1,0 +1,2729 @@
+[
+ {
+  "id": "4ac642d1-fdcb-4f4a-9e28-5890c2c17d3d",
+  "fecha": "2026-08-12",
+  "nombre": "Sandwiches de miga de jamón y queso",
+  "gramos": 100,
+  "kcal": 650,
+  "creado": "2026-08-12T22:44:30.919+00:00",
+  "base": null
+ },
+ {
+  "id": "a8625e32-e3d6-402b-934a-14021ebd8b9a",
+  "fecha": "2026-08-12",
+  "nombre": "Sandwiches de miga de jamón y queso",
+  "gramos": 100,
+  "kcal": 650,
+  "creado": "2026-08-12T22:45:25.801+00:00",
+  "base": null
+ },
+ {
+  "id": "957881bc-744f-40f9-9630-fe180f0fc22f",
+  "fecha": "2026-08-12",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-12T22:45:47.349+00:00",
+  "base": null
+ },
+ {
+  "id": "012ce470-7838-4a56-9974-26e7660f6b1f",
+  "fecha": "2026-08-12",
+  "nombre": "Yogur entero",
+  "gramos": 190,
+  "kcal": 152,
+  "creado": "2026-08-12T22:46:09.669+00:00",
+  "base": null
+ },
+ {
+  "id": "fb02c5d5-7423-4b71-9203-ba3267cb62f9",
+  "fecha": "2026-08-12",
+  "nombre": "Ensalada de frutas",
+  "gramos": 250,
+  "kcal": 150,
+  "creado": "2026-08-12T22:46:09.669+00:00",
+  "base": null
+ },
+ {
+  "id": "1bd1c938-fbfc-401e-83ee-b530600934d6",
+  "fecha": "2026-08-12",
+  "nombre": "Avena",
+  "gramos": 40,
+  "kcal": 148,
+  "creado": "2026-08-12T22:46:09.669+00:00",
+  "base": null
+ },
+ {
+  "id": "7ccba741-51f5-4627-919c-7377a1a785c1",
+  "fecha": "2026-08-12",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-12T22:46:09.669+00:00",
+  "base": null
+ },
+ {
+  "id": "4d08bdbc-8990-415b-81ed-efd7d95385c1",
+  "fecha": "2026-08-12",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-12T22:46:51.467+00:00",
+  "base": null
+ },
+ {
+  "id": "66142697-9bb2-4ded-9a52-85b1355b51e5",
+  "fecha": "2026-08-12",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-12T22:46:57.441+00:00",
+  "base": null
+ },
+ {
+  "id": "8715658c-11d1-4aa7-9a43-5abe269e97cb",
+  "fecha": "2026-08-12",
+  "nombre": "Pebetes combinados",
+  "gramos": 100,
+  "kcal": 650,
+  "creado": "2026-08-12T22:51:00+00:00",
+  "base": null
+ },
+ {
+  "id": "e7fcc969-7393-4f59-a54c-f1fd7f5fd169",
+  "fecha": "2026-08-12",
+  "nombre": "Papa al horno",
+  "gramos": 200,
+  "kcal": 220,
+  "creado": "2026-08-12T22:51:00+00:00",
+  "base": null
+ },
+ {
+  "id": "ed9134e3-47d2-4577-b19b-0729f94fac3c",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T10:20:46.704+00:00",
+  "base": null
+ },
+ {
+  "id": "37c5e34c-d3da-475c-ab6e-d6eb675c2347",
+  "fecha": "2026-08-14",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 380,
+  "creado": "2026-08-14T13:00:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "68536dca-2566-4d32-b450-a52dbb7c2ec0",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T15:38:42.381+00:00",
+  "base": null
+ },
+ {
+  "id": "fa15e72d-ba2a-4146-b601-62cbf6f97011",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T15:38:42.685+00:00",
+  "base": null
+ },
+ {
+  "id": "7208b5a1-4fb9-48d0-927e-30475e29e0e3",
+  "fecha": "2026-08-12",
+  "nombre": "Sándwich de miga (jamón y queso)",
+  "gramos": 110,
+  "kcal": 286,
+  "creado": "2026-08-12T20:30:35.505+00:00",
+  "base": null
+ },
+ {
+  "id": "c5e3cc65-010d-4462-9ed0-6117949ebcbb",
+  "fecha": "2026-08-12",
+  "nombre": "Salame",
+  "gramos": 60,
+  "kcal": 228,
+  "creado": "2026-08-12T20:30:35.506+00:00",
+  "base": null
+ },
+ {
+  "id": "4e95a2d2-be82-46b3-8333-46d0f21f0675",
+  "fecha": "2026-08-12",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-12T20:30:47.135+00:00",
+  "base": null
+ },
+ {
+  "id": "2376bd15-6d59-4e55-b47f-09219dfa38e0",
+  "fecha": "2026-08-12",
+  "nombre": "Yogur entero",
+  "gramos": 190,
+  "kcal": 152,
+  "creado": "2026-08-12T20:31:26.08+00:00",
+  "base": null
+ },
+ {
+  "id": "14f38910-070a-4bb5-bf96-ad2c4b83b597",
+  "fecha": "2026-08-12",
+  "nombre": "Ensalada de frutas",
+  "gramos": 250,
+  "kcal": 150,
+  "creado": "2026-08-12T20:31:26.08+00:00",
+  "base": null
+ },
+ {
+  "id": "c9026861-180f-4978-ac23-49c60776948f",
+  "fecha": "2026-08-12",
+  "nombre": "Avena",
+  "gramos": 40,
+  "kcal": 148,
+  "creado": "2026-08-12T20:31:26.08+00:00",
+  "base": null
+ },
+ {
+  "id": "3e2d8d2c-c973-4c1b-a14a-f069ec39a0dd",
+  "fecha": "2026-08-12",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-12T20:31:26.08+00:00",
+  "base": null
+ },
+ {
+  "id": "e65a432e-d45a-49a9-a1de-1a79419083d1",
+  "fecha": "2026-08-12",
+  "nombre": "Pollo al horno",
+  "gramos": 180,
+  "kcal": 342,
+  "creado": "2026-08-12T20:33:13.898+00:00",
+  "base": null
+ },
+ {
+  "id": "91ccd780-5064-49ae-905a-c4e74977be0f",
+  "fecha": "2026-08-12",
+  "nombre": "Papa al horno",
+  "gramos": 200,
+  "kcal": 220,
+  "creado": "2026-08-12T20:33:25.701+00:00",
+  "base": null
+ },
+ {
+  "id": "760c1619-2c87-4f19-ac64-17338c623546",
+  "fecha": "2026-08-14",
+  "nombre": "Torta (porción)",
+  "gramos": 100,
+  "kcal": 200,
+  "creado": "2026-08-14T13:43:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "12e61b3b-5d6e-407b-8079-6dbaf468eba8",
+  "fecha": "2026-08-14",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 150,
+  "kcal": 190,
+  "creado": "2026-08-14T22:35:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "543506bf-53ce-4277-a5b1-6997c176acb3",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T16:28:39.325+00:00",
+  "base": null
+ },
+ {
+  "id": "8e8d446a-44c0-4cdd-aa59-44f922b05418",
+  "fecha": "2026-08-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-14T23:31:23.849+00:00",
+  "base": null
+ },
+ {
+  "id": "968d4261-3349-4ac3-b9e2-a3ff5f82b6f1",
+  "fecha": "2026-08-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-14T23:31:24.131+00:00",
+  "base": null
+ },
+ {
+  "id": "26536731-4eee-4853-82c5-cf3be66227fb",
+  "fecha": "2026-08-14",
+  "nombre": "Albondigas con arroz y salsa de tomate",
+  "gramos": 150,
+  "kcal": 900,
+  "creado": "2026-08-15T00:59:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "3f957967-f373-440f-b971-f9525d050b5d",
+  "fecha": "2026-08-13",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 900,
+  "creado": "2026-08-13T13:00:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "bb2d75c2-e465-48bb-a667-55b3e3382c96",
+  "fecha": "2026-08-13",
+  "nombre": "Carne asada en cocción lenta con puré tricolor",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-13T17:05:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "85857d62-c812-465a-8699-4e2469236869",
+  "fecha": "2026-08-13",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-13T20:12:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "654c69c6-51f6-48ff-9a8b-22354ef886ca",
+  "fecha": "2026-08-13",
+  "nombre": "Kiwi",
+  "gramos": 75,
+  "kcal": 45,
+  "creado": "2026-08-13T20:12:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "ffcbd712-41d7-409f-b7e3-a9d400e2c567",
+  "fecha": "2026-08-13",
+  "nombre": "Pollo con boniatos asados",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-13T22:42:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "4dfaeb03-442b-41dc-8adc-77a5b60ab6cb",
+  "fecha": "2026-08-13",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-13T22:55:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "6e3c2100-18e6-4958-a845-b8d8314ddfa0",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T23:02:41.35+00:00",
+  "base": null
+ },
+ {
+  "id": "61f399fb-16a8-43e7-a9ad-1068ffb3ebe8",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T23:02:42.113+00:00",
+  "base": null
+ },
+ {
+  "id": "9f8a16bd-846a-45a7-8f2c-9505d357aa1f",
+  "fecha": "2026-08-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-14T11:01:37.111+00:00",
+  "base": null
+ },
+ {
+  "id": "56f29402-1622-409b-9069-be5039a20845",
+  "fecha": "2026-08-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-14T11:01:39.846+00:00",
+  "base": null
+ },
+ {
+  "id": "a056b358-d757-4e96-8cec-1104ffd185af",
+  "fecha": "2026-08-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-14T11:52:59.557+00:00",
+  "base": null
+ },
+ {
+  "id": "a9cdff09-6ae9-4438-af4c-475a6e3eea1e",
+  "fecha": "2026-08-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-14T11:53:01.544+00:00",
+  "base": null
+ },
+ {
+  "id": "af97cde4-a9c0-48bd-bbc5-8af94398eb06",
+  "fecha": "2026-08-14",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-14T14:41:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "3334e453-f48e-489e-bade-ccf6fe11d803",
+  "fecha": "2026-08-14",
+  "nombre": "Chuleta aguja con hueso de cerdo",
+  "gramos": 200,
+  "kcal": 264,
+  "creado": "2026-08-14T17:20:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "737fcb2f-31fb-4e3d-bf1a-795671c305f5",
+  "fecha": "2026-08-14",
+  "nombre": "Arroz blanco cocido",
+  "gramos": 200,
+  "kcal": 260,
+  "creado": "2026-08-14T17:21:00+00:00",
+  "base": 200
+ },
+ {
+  "id": "71f5b8c0-a9dc-46a7-8921-f1644a35c770",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T13:00:23.316+00:00",
+  "base": null
+ },
+ {
+  "id": "7422af82-0c35-4588-808d-ee6450dd872d",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T13:00:24.932+00:00",
+  "base": null
+ },
+ {
+  "id": "52439ab4-bb73-4641-8fa5-2bac03872df2",
+  "fecha": "2026-08-13",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-13T13:00:32.204+00:00",
+  "base": null
+ },
+ {
+  "id": "e7687d22-1a13-43a0-98cb-9abbbe56107c",
+  "fecha": "2026-08-13",
+  "nombre": "Huevo duro",
+  "gramos": 55,
+  "kcal": 85,
+  "creado": "2026-08-13T13:03:00+00:00",
+  "base": null
+ },
+ {
+  "id": "28a2c8de-38f9-4c27-adc8-2ddb7dae4079",
+  "fecha": "2026-08-13",
+  "nombre": "Huevo duro",
+  "gramos": 55,
+  "kcal": 85,
+  "creado": "2026-08-13T13:03:00+00:00",
+  "base": null
+ },
+ {
+  "id": "f064dc5b-9d18-4880-a631-f5cfca4640d9",
+  "fecha": "2026-08-13",
+  "nombre": "Tostadas de salvado de trigo (Siken)",
+  "gramos": 100,
+  "kcal": 343,
+  "creado": "2026-08-13T13:04:00+00:00",
+  "base": null
+ },
+ {
+  "id": "e04e35d4-1cce-4b26-bd71-272c72ec36df",
+  "fecha": "2026-08-13",
+  "nombre": "Tostadas de salvado de trigo (Siken)",
+  "gramos": 100,
+  "kcal": 343,
+  "creado": "2026-08-13T13:04:00+00:00",
+  "base": null
+ },
+ {
+  "id": "d3c4bf0d-8d94-4313-abc9-bbcfa0b12f78",
+  "fecha": "2026-08-14",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-14T18:16:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "ef7c150a-1e0d-4d88-8aa8-0e2c8c21feae",
+  "fecha": "2026-08-14",
+  "nombre": "Kiwi",
+  "gramos": 75,
+  "kcal": 45,
+  "creado": "2026-08-14T18:16:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "54fd7df9-3ec9-49a5-a50f-7b70b6ef163c",
+  "fecha": "2026-08-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-17T02:20:51.703+00:00",
+  "base": null
+ },
+ {
+  "id": "72d63df8-7bce-4c74-a50b-baff1c809105",
+  "fecha": "2026-08-15",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 380,
+  "creado": "2026-08-15T13:58:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "a1b8bc79-3974-436f-8d19-978404d5d465",
+  "fecha": "2026-08-15",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-15T18:10:12.883+00:00",
+  "base": null
+ },
+ {
+  "id": "7b2df1cb-869a-43dd-8845-d3169c655356",
+  "fecha": "2026-08-15",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-15T18:10:13.34+00:00",
+  "base": null
+ },
+ {
+  "id": "1e0facd8-5d34-4d84-90fa-6b9ac0f710a3",
+  "fecha": "2026-08-15",
+  "nombre": "Bife de carne",
+  "gramos": 300,
+  "kcal": 660,
+  "creado": "2026-08-15T18:10:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "70165ad5-d326-4f33-8558-30238fe6e067",
+  "fecha": "2026-08-15",
+  "nombre": "Arroz blanco cocido",
+  "gramos": 200,
+  "kcal": 260,
+  "creado": "2026-08-15T18:10:00+00:00",
+  "base": 200
+ },
+ {
+  "id": "7beb9720-4e9e-4093-a080-30ace1ddc9c1",
+  "fecha": "2026-08-15",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-15T19:48:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "f95e73ed-e073-47dc-a6c0-e3120b92661c",
+  "fecha": "2026-08-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-17T02:20:52.265+00:00",
+  "base": null
+ },
+ {
+  "id": "e0b08221-d051-4a47-be5d-4a05cc86d3e1",
+  "fecha": "2026-08-15",
+  "nombre": "Torta (porción)",
+  "gramos": 100,
+  "kcal": 700,
+  "creado": "2026-08-15T21:10:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "0d98ea11-2f0c-4668-86f8-0fba80825c6c",
+  "fecha": "2026-08-15",
+  "nombre": "Bife de carne",
+  "gramos": 150,
+  "kcal": 330,
+  "creado": "2026-08-16T02:55:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "1eae960b-464d-45d6-921d-c52f95be8557",
+  "fecha": "2026-08-16",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 900,
+  "creado": "2026-08-16T17:59:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "b167174b-faa7-4d1c-965b-048c9fd5cbd9",
+  "fecha": "2026-08-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-16T17:59:41.144+00:00",
+  "base": null
+ },
+ {
+  "id": "254b5d65-9e20-420b-87af-e74b40bf58f7",
+  "fecha": "2026-08-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-16T17:59:41.395+00:00",
+  "base": null
+ },
+ {
+  "id": "2d0e132a-2861-43f4-8283-d8490643a033",
+  "fecha": "2026-08-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-16T17:59:50.129+00:00",
+  "base": null
+ },
+ {
+  "id": "880b61b6-bb51-476b-b0f6-acb6dd952d5a",
+  "fecha": "2026-08-16",
+  "nombre": "Fideos con salsa de tomate",
+  "gramos": 350,
+  "kcal": 700,
+  "creado": "2026-08-16T18:46:00+00:00",
+  "base": 350
+ },
+ {
+  "id": "1689cf17-5f5b-4c82-a74b-0da652d07a81",
+  "fecha": "2026-08-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-16T22:42:28.638+00:00",
+  "base": null
+ },
+ {
+  "id": "a03f7e0b-6bca-4dda-a53b-c0299e2ff5dc",
+  "fecha": "2026-08-16",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-16T22:42:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "34c66f69-8256-452f-ab0c-be80e2095366",
+  "fecha": "2026-08-16",
+  "nombre": "Helado",
+  "gramos": 120,
+  "kcal": 252,
+  "creado": "2026-08-16T23:01:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "acbfe128-f94b-4429-877c-71e4dcd7426f",
+  "fecha": "2026-08-17",
+  "nombre": "Churrasco de paleta con papa y salsa de tomate",
+  "gramos": 150,
+  "kcal": 800,
+  "creado": "2026-08-18T01:10:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "00c56181-81fc-4244-a39a-bb326ae031e2",
+  "fecha": "2026-08-17",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T01:11:16.53+00:00",
+  "base": null
+ },
+ {
+  "id": "15ad43a6-6453-41c2-b67a-60aea5fb7758",
+  "fecha": "2026-08-17",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T01:11:16.928+00:00",
+  "base": null
+ },
+ {
+  "id": "4f214e0e-fa5d-4960-98bd-a9b4045f4c3b",
+  "fecha": "2026-08-16",
+  "nombre": "Pizza de muzzarella",
+  "gramos": 400,
+  "kcal": 2200,
+  "creado": "2026-08-17T02:20:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "3ef4852e-2408-4aa6-a9f0-031152668b48",
+  "fecha": "2026-08-17",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 110,
+  "kcal": 190,
+  "creado": "2026-08-18T01:08:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "c99583ff-fe47-43cc-a759-16bb9858f02d",
+  "fecha": "2026-08-17",
+  "nombre": "Pizza de muzzarella con tomates cherry asados y pesto de albahaca",
+  "gramos": 100,
+  "kcal": 550,
+  "creado": "2026-08-18T01:09:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "099ff7ad-8884-4d7f-95cb-79600d1e31bc",
+  "fecha": "2026-08-17",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 900,
+  "creado": "2026-08-18T01:09:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "6661c8fc-6bf6-4266-824c-6ac246d2ac96",
+  "fecha": "2026-08-17",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T01:11:17.462+00:00",
+  "base": null
+ },
+ {
+  "id": "44b839ad-a77f-466a-acfc-b00b6b4b7591",
+  "fecha": "2026-08-17",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T01:11:17.779+00:00",
+  "base": null
+ },
+ {
+  "id": "1b0deec9-080a-4682-bc1d-99d1d8cb3f64",
+  "fecha": "2026-08-17",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T01:11:18.188+00:00",
+  "base": null
+ },
+ {
+  "id": "494ebd4e-0b23-4405-9f4e-2d3a7beedaf8",
+  "fecha": "2026-08-17",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T01:11:18.488+00:00",
+  "base": null
+ },
+ {
+  "id": "71d4fcbb-3ff6-4eaf-a90d-988cd0a0e498",
+  "fecha": "2026-08-18",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T14:07:33.851+00:00",
+  "base": null
+ },
+ {
+  "id": "2f52bddc-94d5-4928-9823-c81a76d32fd2",
+  "fecha": "2026-08-18",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T14:07:34.833+00:00",
+  "base": null
+ },
+ {
+  "id": "bec0b008-44fc-4812-9e3c-3fc0f9176318",
+  "fecha": "2026-08-18",
+  "nombre": "Bife magro de cerdo con puré de zanahoria",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-18T16:42:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "a6abae01-da17-48c6-bd87-4b4bad7b3f31",
+  "fecha": "2026-08-18",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-18T16:44:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "71a99cbc-602b-464f-b4e6-fc7a36a7e74b",
+  "fecha": "2026-08-18",
+  "nombre": "Bocado de dulce de membrillo (Enrique Pizarro)",
+  "gramos": 30,
+  "kcal": 75,
+  "creado": "2026-08-18T17:02:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "ddf456d5-0118-4fe1-aaf1-d04f1bfac8f4",
+  "fecha": "2026-08-18",
+  "nombre": "Yogur Dahi descremado con frutilla",
+  "gramos": 190,
+  "kcal": 182,
+  "creado": "2026-08-18T20:10:00+00:00",
+  "base": 190
+ },
+ {
+  "id": "3c6ec110-c5fa-4b62-870b-3000aec6c22a",
+  "fecha": "2026-08-18",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-18T20:10:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "08c31a36-84fb-4452-9822-557cff56eb73",
+  "fecha": "2026-08-18",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-08-18T20:10:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "7e0c7197-d5d0-48ca-a8c6-c220228e58dc",
+  "fecha": "2026-08-18",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T20:15:47.755+00:00",
+  "base": null
+ },
+ {
+  "id": "543bc0c1-10f9-409c-8f70-ccc2f578ed4d",
+  "fecha": "2026-08-18",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-18T20:15:47.308+00:00",
+  "base": null
+ },
+ {
+  "id": "4d401795-3171-4a0c-92e5-5777233262bd",
+  "fecha": "2026-08-18",
+  "nombre": "Café solo",
+  "gramos": 100,
+  "kcal": 2,
+  "creado": "2026-08-18T20:16:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "a4ba20d5-f849-4946-9829-cef03cd32a21",
+  "fecha": "2026-08-18",
+  "nombre": "Pollo con panaché de papa, remolacha y zanahoria",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-18T22:10:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "031561a2-b4c2-4d6e-a759-80ba78288894",
+  "fecha": "2026-08-19",
+  "nombre": "Carne asada en cocción lenta con puré fiorentino",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-19T16:31:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "552aa38e-5a31-48a3-8515-e4b019bd2756",
+  "fecha": "2026-08-19",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-19T16:44:52.839+00:00",
+  "base": null
+ },
+ {
+  "id": "c9cfbe07-b0d2-4ecf-985b-6f9bd3622017",
+  "fecha": "2026-08-19",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-19T16:44:53.861+00:00",
+  "base": null
+ },
+ {
+  "id": "dceb21e4-9a17-46fd-8450-cae8e0865e55",
+  "fecha": "2026-08-19",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-19T19:58:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "52f80755-c673-4062-a7f1-1cfaa9eefb05",
+  "fecha": "2026-08-19",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-19T19:59:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "6c115794-a8b9-4507-9fd1-a91d431b1bfe",
+  "fecha": "2026-08-19",
+  "nombre": "Manzana",
+  "gramos": 300,
+  "kcal": 156,
+  "creado": "2026-08-19T20:56:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "74bd51a7-be98-481a-9f57-519bb449d893",
+  "fecha": "2026-08-27",
+  "nombre": "Yogurt Tregar Durazno c/frutas x160 (Tregar)",
+  "gramos": 100,
+  "kcal": 159,
+  "creado": "2026-08-27T22:28:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "ca75da44-fee7-4211-a715-1c64c40e7c6c",
+  "fecha": "2026-08-27",
+  "nombre": "Caesar Salad Dressing (Promos)",
+  "gramos": 100,
+  "kcal": 467,
+  "creado": "2026-08-27T22:43:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "8869982b-e86c-41a2-9982-62210ff386f0",
+  "fecha": "2026-08-31",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-08-31T14:06:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "349997a8-700b-45f6-9be4-f39857b5b53f",
+  "fecha": "2026-08-24",
+  "nombre": "Guiso de lentejas (via nature)",
+  "gramos": 1000,
+  "kcal": 600,
+  "creado": "2026-08-25T00:52:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "53b2a1b1-446c-4b58-9525-7381a51e2e70",
+  "fecha": "2026-08-24",
+  "nombre": "Risotto",
+  "gramos": 300,
+  "kcal": 510,
+  "creado": "2026-08-25T00:52:00+00:00",
+  "base": 300
+ },
+ {
+  "id": "ae927c5c-be8c-4d85-bdf0-5894d20d0829",
+  "fecha": "2026-08-19",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 640,
+  "creado": "2026-08-19T13:10:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "221f7334-5ef5-4501-b778-cbc29d07b848",
+  "fecha": "2026-08-25",
+  "nombre": "Proteinccino (cappuccino proteico Powermix)",
+  "gramos": 250,
+  "kcal": 198,
+  "creado": "2026-08-25T17:22:00+00:00",
+  "base": 250
+ },
+ {
+  "id": "2970db44-f0b8-4a37-97ba-27f5a379b579",
+  "fecha": "2026-08-25",
+  "nombre": "Pollo con panaché de papa, remolacha y zanahoria",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-25T17:33:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "6a18a60b-61af-47e6-bee2-d39c279610f9",
+  "fecha": "2026-08-19",
+  "nombre": "Milanesa de carne",
+  "gramos": 300,
+  "kcal": 750,
+  "creado": "2026-08-20T00:21:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "8ce3acc4-da7a-4412-b8c0-c1496f7d202a",
+  "fecha": "2026-08-19",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T00:59:11.071+00:00",
+  "base": null
+ },
+ {
+  "id": "e972bad0-0800-4e2b-988f-a1a5b6f9876d",
+  "fecha": "2026-08-19",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T00:59:11.484+00:00",
+  "base": null
+ },
+ {
+  "id": "15faadce-2bfd-4bfb-8c12-2b5ee620a7f4",
+  "fecha": "2026-08-19",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T00:59:13.268+00:00",
+  "base": null
+ },
+ {
+  "id": "5f9da0f1-cab2-4e5d-8e7b-c0b9af38af7c",
+  "fecha": "2026-08-19",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T00:59:13.718+00:00",
+  "base": null
+ },
+ {
+  "id": "399465d1-494d-4831-8016-3d82ef578c42",
+  "fecha": "2026-08-25",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-25T17:33:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "6dec8429-168f-4389-bad8-afc2ac7b61c1",
+  "fecha": "2026-08-25",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-25T17:33:48.021+00:00",
+  "base": null
+ },
+ {
+  "id": "e64cf04b-4fd6-476d-91e6-856e00af3b31",
+  "fecha": "2026-08-25",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-25T17:33:48.213+00:00",
+  "base": null
+ },
+ {
+  "id": "2ab9073d-ea31-4268-b07c-0537433185c4",
+  "fecha": "2026-08-25",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-25T17:33:48.973+00:00",
+  "base": null
+ },
+ {
+  "id": "c1bcaa8e-e043-44b7-bc6a-23ecc185838d",
+  "fecha": "2026-08-25",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-25T17:33:49.205+00:00",
+  "base": null
+ },
+ {
+  "id": "78bcf91b-4df6-4c1c-acb6-17d8e020fb17",
+  "fecha": "2026-08-20",
+  "nombre": "bocadito de higo con nuez",
+  "gramos": 250,
+  "kcal": 200,
+  "creado": "2026-08-20T14:05:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "8610c180-f6b1-4388-9322-3db9cb64a746",
+  "fecha": "2026-08-20",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-20T14:09:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "0073e173-f409-454f-a85a-c85baa956dfa",
+  "fecha": "2026-08-20",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-20T14:10:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "3fd0bf12-3bea-4bf8-b624-66ccf254f184",
+  "fecha": "2026-08-20",
+  "nombre": "Pollo, acompañado de arroz salteado con champignones",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-20T16:51:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "3e33666f-a579-4816-a74e-78ce9ba6ee39",
+  "fecha": "2026-08-20",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-08-20T16:52:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "34c196a1-fb3a-41f5-9cc9-5d52c22205f2",
+  "fecha": "2026-08-20",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-20T20:30:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "f2e636f7-ce0b-468f-8930-e6bb8f99458d",
+  "fecha": "2026-08-20",
+  "nombre": "Kiwi",
+  "gramos": 75,
+  "kcal": 45,
+  "creado": "2026-08-20T20:30:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "d1957fcb-7784-4273-ac7e-9122052aed7e",
+  "fecha": "2026-08-20",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-20T20:30:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "816f50bc-d5aa-4003-b804-b34a5adfb306",
+  "fecha": "2026-08-20",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T20:30:47.55+00:00",
+  "base": null
+ },
+ {
+  "id": "258adfc6-9d25-434c-ad2f-8c8643bd4835",
+  "fecha": "2026-08-20",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T20:30:47.678+00:00",
+  "base": null
+ },
+ {
+  "id": "158fece5-64a0-4e4e-b5c8-dbbacadf08e8",
+  "fecha": "2026-08-20",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T20:30:47.829+00:00",
+  "base": null
+ },
+ {
+  "id": "3e3a62e1-9ab1-4d5a-b1b8-c18660d0d1b7",
+  "fecha": "2026-08-20",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T20:30:47.973+00:00",
+  "base": null
+ },
+ {
+  "id": "4d2b1a26-f3ef-439b-bd49-def6a1bd5aff",
+  "fecha": "2026-08-20",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T20:30:48.309+00:00",
+  "base": null
+ },
+ {
+  "id": "5f26e4db-58cc-457e-b4f2-6024246b61eb",
+  "fecha": "2026-08-20",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-20T20:30:48.725+00:00",
+  "base": null
+ },
+ {
+  "id": "32ab2132-d60f-4359-9f5f-71214d209d1c",
+  "fecha": "2026-08-21",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-21T10:43:15.816+00:00",
+  "base": null
+ },
+ {
+  "id": "f469f6cb-f53a-4530-a1c6-7e7d314664e8",
+  "fecha": "2026-08-21",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 400,
+  "creado": "2026-08-21T12:55:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "f9d20bbc-d647-4ca3-8182-f56b0e3121ae",
+  "fecha": "2026-08-21",
+  "nombre": "Hydro Max isotónica (Nutremax)",
+  "gramos": 33,
+  "kcal": 124,
+  "creado": "2026-08-21T12:56:00+00:00",
+  "base": 33
+ },
+ {
+  "id": "ff9fcefa-c3a1-44a5-87d5-68c225a8b4ac",
+  "fecha": "2026-08-22",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-22T20:15:59.575+00:00",
+  "base": null
+ },
+ {
+  "id": "85a69875-7e70-47da-9bfd-9ec4ae6179fc",
+  "fecha": "2026-08-22",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-22T20:15:59.82+00:00",
+  "base": null
+ },
+ {
+  "id": "79384666-a1f3-4274-8c2f-b4693b5ef18f",
+  "fecha": "2026-08-22",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-22T20:16:01.025+00:00",
+  "base": null
+ },
+ {
+  "id": "0a013d45-9cd5-43cb-af16-0985e1ba9d49",
+  "fecha": "2026-08-22",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-22T20:16:01.421+00:00",
+  "base": null
+ },
+ {
+  "id": "f5fbf096-f547-4e5d-8e88-b577c5b940dd",
+  "fecha": "2026-08-22",
+  "nombre": "Bife de carne",
+  "gramos": 150,
+  "kcal": 330,
+  "creado": "2026-08-22T20:16:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "0f63cdfd-5b5a-4844-9c8f-ed21022517eb",
+  "fecha": "2026-08-22",
+  "nombre": "Pechuga de pollo a la plancha",
+  "gramos": 150,
+  "kcal": 225,
+  "creado": "2026-08-22T20:16:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "862faef3-640b-4733-8c02-fae381cdafcb",
+  "fecha": "2026-08-22",
+  "nombre": "Fideos con salsa de tomate",
+  "gramos": 350,
+  "kcal": 525,
+  "creado": "2026-08-22T20:16:00+00:00",
+  "base": 350
+ },
+ {
+  "id": "19381f9e-732f-4549-8416-78b43c59fbdd",
+  "fecha": "2026-08-22",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 380,
+  "creado": "2026-08-22T20:16:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "7656ea09-cf35-464e-ac8f-177929894242",
+  "fecha": "2026-08-22",
+  "nombre": "Hydro Max isotónica (Nutremax)",
+  "gramos": 33,
+  "kcal": 124,
+  "creado": "2026-08-22T20:17:00+00:00",
+  "base": 33
+ },
+ {
+  "id": "131c8fa6-3b17-400b-8b6d-2dd66c8becdb",
+  "fecha": "2026-08-24",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 360,
+  "creado": "2026-08-24T12:27:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "755e2a54-0196-4ddf-9405-36574a8a5380",
+  "fecha": "2026-08-24",
+  "nombre": "Carne asada en cocción lenta con puré de papas al verdeo",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-24T16:27:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "be6e0bd5-bc84-4be0-a38d-cc173b2a05f2",
+  "fecha": "2026-08-24",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-24T22:23:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "04f6d454-bc4d-47ec-bf0b-f38495d8441c",
+  "fecha": "2026-08-25",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-08-25T20:58:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "bc8743f5-4173-42a0-a7eb-73a865d068ef",
+  "fecha": "2026-08-25",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-25T21:01:50.894+00:00",
+  "base": null
+ },
+ {
+  "id": "986a7c63-2186-48d7-88fc-23306d22da89",
+  "fecha": "2026-08-25",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-25T21:01:51.254+00:00",
+  "base": null
+ },
+ {
+  "id": "9c9eb054-2e57-41cb-87f6-3ce7d9ca8d97",
+  "fecha": "2026-08-25",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-25T21:42:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "87b0a03b-f6f9-418e-8239-e126e8683cee",
+  "fecha": "2026-08-31",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-08-31T14:28:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "88912756-87c8-45c8-8662-20d5c8799969",
+  "fecha": "2026-08-26",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-26T12:30:40.03+00:00",
+  "base": null
+ },
+ {
+  "id": "d8ee63aa-e80f-449b-98aa-72050ba1294b",
+  "fecha": "2026-08-26",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-08-26T12:30:40.252+00:00",
+  "base": null
+ },
+ {
+  "id": "652c3a29-55be-4ef5-b94c-d2ecd101dcc4",
+  "fecha": "2026-08-26",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 400,
+  "creado": "2026-08-26T12:30:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "06df9a3d-39b9-4415-96b5-811ca6009041",
+  "fecha": "2026-08-26",
+  "nombre": "Ensalada completa con cubos de jamón y queso SAP",
+  "gramos": 100,
+  "kcal": 400,
+  "creado": "2026-08-26T16:26:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "fe4bd58a-e0cf-4f8a-a29f-674b298d2bb1",
+  "fecha": "2026-08-26",
+  "nombre": "Barrita de cereal",
+  "gramos": 23,
+  "kcal": 92,
+  "creado": "2026-08-26T18:40:00+00:00",
+  "base": 23
+ },
+ {
+  "id": "6a1aebf1-a405-4a79-a843-596fb3a60a03",
+  "fecha": "2026-08-26",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-08-26T19:59:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "0e459909-8aa3-4d0a-9dbd-ebe921df1c36",
+  "fecha": "2026-08-26",
+  "nombre": "Kiwi",
+  "gramos": 150,
+  "kcal": 90,
+  "creado": "2026-08-26T22:10:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "9be85da6-234e-4953-9a15-fa32f916b30f",
+  "fecha": "2026-08-26",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-08-26T22:10:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "0f97e7a5-3806-43be-9c3e-5c956bdefb7a",
+  "fecha": "2026-08-27",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-08-27T16:09:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "7394a642-95e8-4a67-b9ae-8a458b3a3609",
+  "fecha": "2026-08-27",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-08-27T16:10:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "d6a9b57e-70f0-49c2-a9b1-9dda64d0a0ac",
+  "fecha": "2026-08-27",
+  "nombre": "Pollo con puré de batata y miel",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-27T16:10:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "ee5ca8b1-a70b-4a07-b84c-6000f1bfde0a",
+  "fecha": "2026-08-31",
+  "nombre": "Tuna salad con arroz, lentejas, mix de verdes, papines, tomates cherry, huevo, y zanahoria",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-08-31T16:23:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "c987f079-974d-4f24-b7d3-1e17020107bd",
+  "fecha": "2026-08-31",
+  "nombre": "bocadito de higo con nuez",
+  "gramos": 600,
+  "kcal": 400,
+  "creado": "2026-08-31T17:52:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "459740db-9e99-42d9-afc2-48f5d4d3083e",
+  "fecha": "2026-08-31",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-08-31T20:56:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "16ed01c8-9f12-403e-8e92-f37bdc73ffa5",
+  "fecha": "2026-08-31",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-08-31T22:13:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "b304ca33-3780-4ff7-823e-424baa26a215",
+  "fecha": "2026-09-01",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-01T17:38:44.224+00:00",
+  "base": null
+ },
+ {
+  "id": "48ac7d56-9454-4118-b32a-ff651301e14d",
+  "fecha": "2026-09-01",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-01T17:38:44.6+00:00",
+  "base": null
+ },
+ {
+  "id": "d05e75a8-e966-419e-93dd-2624d1369a6c",
+  "fecha": "2026-09-01",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 150,
+  "kcal": 180,
+  "creado": "2026-09-01T12:20:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "4cbc452b-6210-4699-9403-42b835103ec6",
+  "fecha": "2026-09-08",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-08T13:14:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "49fbeb8f-1396-486b-a5f3-a415ac9d5af7",
+  "fecha": "2026-09-01",
+  "nombre": "Café solo",
+  "gramos": 100,
+  "kcal": 2,
+  "creado": "2026-09-01T12:02:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "3367872d-f302-4f87-b862-b74c6e5e0bab",
+  "fecha": "2026-09-08",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-08T13:14:30.86+00:00",
+  "base": null
+ },
+ {
+  "id": "6d8a7567-260e-425a-879e-7912d51e5986",
+  "fecha": "2026-09-01",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-01T14:02:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "8ea93272-27a9-4762-a82d-1fb45fb8ad3d",
+  "fecha": "2026-09-08",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-08T13:14:31.033+00:00",
+  "base": null
+ },
+ {
+  "id": "aedcc3db-7b5a-4c6b-8ff3-396b0a13c626",
+  "fecha": "2026-09-08",
+  "nombre": "Pollo dieta con puré de batata al verdeo",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-08T16:16:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "db1fc025-e45b-4606-8140-1dc4a53c180a",
+  "fecha": "2026-09-08",
+  "nombre": "Kiwi",
+  "gramos": 75,
+  "kcal": 45,
+  "creado": "2026-09-08T18:02:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "e77ebb9b-d146-426d-86bd-5685ae5d1325",
+  "fecha": "2026-09-08",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-08T18:02:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "b30be33a-fba9-40c6-83c5-9f21afddf0b4",
+  "fecha": "2026-09-01",
+  "nombre": "Pollo con jardinera de papa, zanahoria y choclo",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-01T16:19:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "482f7901-314d-495c-8014-9a474340cd85",
+  "fecha": "2026-09-01",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-01T21:25:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "f087477c-56c6-40e7-a267-86af9fd9b054",
+  "fecha": "2026-09-01",
+  "nombre": "Kiwi",
+  "gramos": 75,
+  "kcal": 45,
+  "creado": "2026-09-01T21:25:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "d83a9875-3f8a-4584-aab5-15d1692deb60",
+  "fecha": "2026-09-01",
+  "nombre": "Zucca salad con mix de verdes, porotos negros, queso, tomates cherry, calabaza apanada en polenta y maní",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-02T02:58:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "64070c0e-3d98-4d3a-aaa4-1d24603077a2",
+  "fecha": "2026-09-02",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 150,
+  "kcal": 200,
+  "creado": "2026-09-02T14:34:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "6c1ea45d-b338-4c74-8c58-81e9455a3e40",
+  "fecha": "2026-09-02",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 110,
+  "kcal": 150,
+  "creado": "2026-09-02T14:34:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "0b553369-8e7f-42a6-9367-917ddba68c28",
+  "fecha": "2026-09-02",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-02T14:34:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "36fa626f-8aa1-4001-a635-1c4153ae24b1",
+  "fecha": "2026-09-09",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-09T19:38:52.667+00:00",
+  "base": null
+ },
+ {
+  "id": "d1f0dc65-870d-40e9-aea8-4ed48de7c20d",
+  "fecha": "2026-09-02",
+  "nombre": "Carne asada en cocción lenta con panaché de choclo, papa y remolacha",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-02T16:41:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "6b3eb709-f853-49a4-b689-3b038ca7676b",
+  "fecha": "2026-09-02",
+  "nombre": "Sandwiches de miga de jamón y queso",
+  "gramos": 100,
+  "kcal": 650,
+  "creado": "2026-09-02T20:25:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "f9140be6-2e9e-4b1d-bc5c-3e3a6bf2856a",
+  "fecha": "2026-09-02",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-09-02T20:25:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "1e8d4775-44cf-43ef-8a3b-7542c3737926",
+  "fecha": "2026-09-02",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-02T20:25:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "2325ae82-b9f8-4b23-8dc1-8adfd1a5a50f",
+  "fecha": "2026-09-03",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 150,
+  "kcal": 200,
+  "creado": "2026-09-03T11:38:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "d1506168-33bc-4598-ae21-e287b1610527",
+  "fecha": "2026-09-03",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 110,
+  "kcal": 200,
+  "creado": "2026-09-03T11:38:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "a5bd125c-0ef4-49ed-ab9d-861aeeea7046",
+  "fecha": "2026-09-03",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-03T17:36:48.046+00:00",
+  "base": null
+ },
+ {
+  "id": "0ddf8817-e900-497e-a9b6-47d7902cd3c4",
+  "fecha": "2026-09-03",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-03T17:36:47.849+00:00",
+  "base": null
+ },
+ {
+  "id": "1f3c9497-687c-48f9-9668-13fb718bed02",
+  "fecha": "2026-09-03",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-03T17:36:48.214+00:00",
+  "base": null
+ },
+ {
+  "id": "2863769e-808f-4fc1-8b3d-b1658d9337f0",
+  "fecha": "2026-09-03",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-03T17:36:48.358+00:00",
+  "base": null
+ },
+ {
+  "id": "0a3ef8ab-abc7-4f90-bae2-21904f3b5f4a",
+  "fecha": "2026-09-03",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-03T17:36:49.981+00:00",
+  "base": null
+ },
+ {
+  "id": "64654f04-5f3c-4c64-9f9a-9d5a6762ddee",
+  "fecha": "2026-09-03",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-03T17:36:50.15+00:00",
+  "base": null
+ },
+ {
+  "id": "9e226997-c488-4cfa-a378-a742c171b750",
+  "fecha": "2026-09-09",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-09T19:38:51.742+00:00",
+  "base": null
+ },
+ {
+  "id": "f65c1fe2-b615-4811-8fa2-5fcd092ae5c8",
+  "fecha": "2026-09-09",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-09T19:38:51.922+00:00",
+  "base": null
+ },
+ {
+  "id": "37dd4079-a255-4d47-a9a4-a3aa7b1f7fe2",
+  "fecha": "2026-09-03",
+  "nombre": "Ensalada cesar con pollo, croutones y mix de semillas SAP",
+  "gramos": 100,
+  "kcal": 400,
+  "creado": "2026-09-03T16:00:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "89a5789b-2b9b-43e9-8e88-1f127aaf49ec",
+  "fecha": "2026-09-03",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-03T17:37:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "aad347df-e0ac-4510-9568-698607997c0f",
+  "fecha": "2026-09-03",
+  "nombre": "Sándwich de miga (jamón y queso)",
+  "gramos": 110,
+  "kcal": 286,
+  "creado": "2026-09-03T19:58:00+00:00",
+  "base": 55
+ },
+ {
+  "id": "4a2b3f4e-e455-4c48-8c28-610a76049cda",
+  "fecha": "2026-09-03",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-09-03T19:59:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "0e65021b-4d63-462b-adab-9218acd73e2b",
+  "fecha": "2026-09-03",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-03T19:59:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "eb73539a-e720-468f-9a19-069055f150eb",
+  "fecha": "2026-09-03",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-09-03T21:41:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "736dcec5-5b47-4119-8e20-4ca518a6411a",
+  "fecha": "2026-09-04",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-04T12:35:35.406+00:00",
+  "base": null
+ },
+ {
+  "id": "39f28509-1858-41f7-98c4-7d4b49e37f6a",
+  "fecha": "2026-09-04",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-04T12:35:36.077+00:00",
+  "base": null
+ },
+ {
+  "id": "5b866e01-a3c4-4ca4-aa7f-cdeb070fe33a",
+  "fecha": "2026-09-04",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 110,
+  "kcal": 209,
+  "creado": "2026-09-04T12:35:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "0b1eb9f4-2714-4d67-9b16-ca4a8caf6f18",
+  "fecha": "2026-09-04",
+  "nombre": "Hydro Max isotónica (Nutremax)",
+  "gramos": 33,
+  "kcal": 124,
+  "creado": "2026-09-04T12:36:00+00:00",
+  "base": 33
+ },
+ {
+  "id": "9c748ab5-9be0-4bd4-8b21-83542661014f",
+  "fecha": "2026-09-04",
+  "nombre": "Barra Proteica Sabor a Chocolate (Way Up)",
+  "gramos": 100,
+  "kcal": 352,
+  "creado": "2026-09-04T13:11:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "3b5f24b0-8eac-48dc-b374-3d561b02e02e",
+  "fecha": "2026-09-04",
+  "nombre": "Milanesa de carne",
+  "gramos": 300,
+  "kcal": 600,
+  "creado": "2026-09-04T18:45:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "1f1bcb84-e7e2-4929-a836-97290d6bbeb8",
+  "fecha": "2026-09-04",
+  "nombre": "Tortilla de papa",
+  "gramos": 200,
+  "kcal": 250,
+  "creado": "2026-09-04T18:45:00+00:00",
+  "base": 200
+ },
+ {
+  "id": "a7f9d02d-bb14-4af2-9fd0-c8a200f0f1ee",
+  "fecha": "2026-09-05",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 220,
+  "kcal": 418,
+  "creado": "2026-09-05T17:17:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "627d781d-5c4f-4862-bdfc-72c15494227c",
+  "fecha": "2026-09-05",
+  "nombre": "Café solo",
+  "gramos": 100,
+  "kcal": 2,
+  "creado": "2026-09-05T17:17:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "8a208255-c9e1-4ecf-b173-412aee72273d",
+  "fecha": "2026-09-05",
+  "nombre": "Pollo con boniatos asados",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-05T17:17:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "1a70359e-4303-4c6a-99b2-5196e0f06a98",
+  "fecha": "2026-09-05",
+  "nombre": "Huevo duro",
+  "gramos": 110,
+  "kcal": 171,
+  "creado": "2026-09-05T17:18:00+00:00",
+  "base": 55
+ },
+ {
+  "id": "ce285ea7-32f6-48d2-a9cb-31f1d6a3b6f7",
+  "fecha": "2026-09-07",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-07T14:19:26.242+00:00",
+  "base": null
+ },
+ {
+  "id": "7996972d-020f-4d8a-b7fd-593d3cc8953a",
+  "fecha": "2026-09-07",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-07T14:19:26.85+00:00",
+  "base": null
+ },
+ {
+  "id": "93542318-adfc-4c87-bd78-2cdd270f291c",
+  "fecha": "2026-09-09",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-09T19:38:52.314+00:00",
+  "base": null
+ },
+ {
+  "id": "a8f7d8cf-52d3-4607-8424-efae6fad8621",
+  "fecha": "2026-09-09",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-09T19:38:53.85+00:00",
+  "base": null
+ },
+ {
+  "id": "39af8bd4-5a0c-42bc-bfb1-d8d46e7c950a",
+  "fecha": "2026-09-09",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-09T19:38:54.026+00:00",
+  "base": null
+ },
+ {
+  "id": "782f901b-8dd5-4ff7-9ce7-d1adb92bb927",
+  "fecha": "2026-09-07",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 300,
+  "kcal": 400,
+  "creado": "2026-09-07T10:20:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "7a5b26c7-3f52-4574-9c2c-8e2a1386b059",
+  "fecha": "2026-09-07",
+  "nombre": "Proteinccino (cappuccino proteico Powermix)",
+  "gramos": 250,
+  "kcal": 198,
+  "creado": "2026-09-07T14:20:00+00:00",
+  "base": 250
+ },
+ {
+  "id": "80d7852b-0cec-4d29-9a30-2cd94775995a",
+  "fecha": "2026-09-07",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-07T15:20:25.089+00:00",
+  "base": null
+ },
+ {
+  "id": "99fa7de2-a8e3-46ba-ba82-166783e8ac59",
+  "fecha": "2026-09-07",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-07T15:20:24.884+00:00",
+  "base": null
+ },
+ {
+  "id": "77421899-395d-4a70-b0c3-a17dfc7379c2",
+  "fecha": "2026-09-07",
+  "nombre": "Bife de cerdo ahumado con jardinera",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-07T16:27:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "3f48df29-a3f0-4c04-a530-64e0c14141ab",
+  "fecha": "2026-09-07",
+  "nombre": "bocadito de higo con nuez",
+  "gramos": 300,
+  "kcal": 300,
+  "creado": "2026-09-07T16:48:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "80a16d00-e820-4492-81da-f9b46e54878a",
+  "fecha": "2026-09-07",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-07T20:55:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "32080f4e-95b1-4770-adc0-9a77f7ca86b5",
+  "fecha": "2026-09-07",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-07T21:50:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "f25528fe-055c-469e-8122-f9fbceb21a24",
+  "fecha": "2026-09-07",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-07T21:58:41.508+00:00",
+  "base": null
+ },
+ {
+  "id": "7221ad47-2bb8-4bee-a72c-cc589da25d76",
+  "fecha": "2026-09-07",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-07T21:58:41.356+00:00",
+  "base": null
+ },
+ {
+  "id": "80a2dcb1-eca7-4a38-8cf9-d57e4865e58c",
+  "fecha": "2026-09-09",
+  "nombre": "Carne asada en cocción lenta con risotto de champignones",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-09T16:00:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "741a72ec-9f3e-4bbd-aa33-0e7ac6e15d90",
+  "fecha": "2026-09-09",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-09T19:39:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "8b7b4d3c-1929-4db8-97b7-29b91d8485e7",
+  "fecha": "2026-09-09",
+  "nombre": "Tostada de pan de salvado, queso crema y huevo",
+  "gramos": 190,
+  "kcal": 362,
+  "creado": "2026-09-09T12:00:00+00:00",
+  "base": 95
+ },
+ {
+  "id": "22e4448a-ef5b-4a39-9d99-57f6bd00064b",
+  "fecha": "2026-09-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-15T01:18:11.802+00:00",
+  "base": null
+ },
+ {
+  "id": "297b7847-e782-43bf-a5de-477663e891c2",
+  "fecha": "2026-09-09",
+  "nombre": "Kiwi",
+  "gramos": 150,
+  "kcal": 90,
+  "creado": "2026-09-09T16:39:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "3c74dc2c-a96d-4443-9b53-c018410e3437",
+  "fecha": "2026-09-10",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-09-10T15:36:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "30dfbbe6-e71e-4c40-a8a1-beb82609e41d",
+  "fecha": "2026-09-10",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-10T15:37:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "362998d3-1117-45d5-a155-75b05637650f",
+  "fecha": "2026-09-10",
+  "nombre": "Carré de cerdo ahumado con puré crema de zanahorias",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-10T16:09:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "af033bfd-468d-4cc9-a672-7c9188cb7c71",
+  "fecha": "2026-09-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-15T01:18:12.541+00:00",
+  "base": null
+ },
+ {
+  "id": "a9bf094f-e4b7-4c27-b0a7-39472ffa56be",
+  "fecha": "2026-09-10",
+  "nombre": "Atún al natural",
+  "gramos": 120,
+  "kcal": 132,
+  "creado": "2026-09-10T16:10:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "90d4f816-7762-4a9e-aa6d-efe69747a294",
+  "fecha": "2026-09-10",
+  "nombre": "Yogurt Tregar Durazno c/frutas x160 (Tregar)",
+  "gramos": 100,
+  "kcal": 159,
+  "creado": "2026-09-10T18:56:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "42353d3d-35e0-4841-90a0-29e5cbbb9221",
+  "fecha": "2026-09-10",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-10T18:56:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "26a871dd-faf4-410f-818e-fcf69283ac61",
+  "fecha": "2026-09-10",
+  "nombre": "Sándwich de miga (jamón y queso)",
+  "gramos": 110,
+  "kcal": 286,
+  "creado": "2026-09-10T19:57:00+00:00",
+  "base": 55
+ },
+ {
+  "id": "76697d7c-e3f6-4c7c-8842-a26cfbb910ad",
+  "fecha": "2026-09-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-15T01:18:13.008+00:00",
+  "base": null
+ },
+ {
+  "id": "33aa16c3-c4d7-43d8-9147-b768e48fedec",
+  "fecha": "2026-09-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-15T01:18:13.613+00:00",
+  "base": null
+ },
+ {
+  "id": "54c9ba15-aabb-4f7a-86d4-370c663698c1",
+  "fecha": "2026-09-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-15T01:18:15.265+00:00",
+  "base": null
+ },
+ {
+  "id": "cadc19ee-258f-41a2-9f64-1049703e7369",
+  "fecha": "2026-09-14",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-15T01:18:15.459+00:00",
+  "base": null
+ },
+ {
+  "id": "e4e3a859-254e-4797-88d8-412fdda131cc",
+  "fecha": "2026-09-14",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 220,
+  "kcal": 418,
+  "creado": "2026-09-14T11:00:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "8e1ddb5c-212b-4d23-b7ce-efa9643b0963",
+  "fecha": "2026-09-14",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 220,
+  "kcal": 418,
+  "creado": "2026-09-15T01:20:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "bab5639d-a317-4f71-8505-e1864e31eb56",
+  "fecha": "2026-09-14",
+  "nombre": "Papa al horno",
+  "gramos": 200,
+  "kcal": 220,
+  "creado": "2026-09-15T01:20:00+00:00",
+  "base": 200
+ },
+ {
+  "id": "fda2ed39-e07d-444a-b6fb-81ee985b9a80",
+  "fecha": "2026-09-14",
+  "nombre": "Bondiola de cerdo",
+  "gramos": 180,
+  "kcal": 468,
+  "creado": "2026-09-15T01:20:00+00:00",
+  "base": 180
+ },
+ {
+  "id": "7bfecb35-9cbf-4be9-b012-a879e54504b1",
+  "fecha": "2026-09-14",
+  "nombre": "Bife de carne",
+  "gramos": 150,
+  "kcal": 330,
+  "creado": "2026-09-15T01:21:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "49971f23-e6f5-4f5f-a039-0637e72ce6ba",
+  "fecha": "2026-09-14",
+  "nombre": "Arroz blanco cocido",
+  "gramos": 200,
+  "kcal": 260,
+  "creado": "2026-09-15T01:21:00+00:00",
+  "base": 200
+ },
+ {
+  "id": "aca9d559-1edd-4d04-a5e8-e1042a41d709",
+  "fecha": "2026-09-15",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-15T12:29:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "b423ebb3-af37-4082-bc62-c9b88ca0bcf7",
+  "fecha": "2026-09-15",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-15T14:38:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "8592fb50-729f-4f67-be7b-148a236aa885",
+  "fecha": "2026-09-15",
+  "nombre": "Carré de cerdo ahumado con zanahorias asadas en pimentón dulce",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-15T16:43:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "536b099b-3550-40d8-ab89-158edfe764de",
+  "fecha": "2026-09-15",
+  "nombre": "Barrita de cereal",
+  "gramos": 46,
+  "kcal": 201,
+  "creado": "2026-09-15T18:48:00+00:00",
+  "base": 23
+ },
+ {
+  "id": "b902848a-f844-447e-87ec-ad8f318701f9",
+  "fecha": "2026-09-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-16T15:27:28.963+00:00",
+  "base": null
+ },
+ {
+  "id": "c0c34660-0801-41f3-942a-ed3e6c556a85",
+  "fecha": "2026-09-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-16T15:27:29.858+00:00",
+  "base": null
+ },
+ {
+  "id": "f68fe0f5-57e2-4835-bbe8-7a4b8ecb5029",
+  "fecha": "2026-09-16",
+  "nombre": "Café solo",
+  "gramos": 100,
+  "kcal": 2,
+  "creado": "2026-09-16T15:27:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "d8fbedf1-df27-4d1c-9e03-1b28d237bf00",
+  "fecha": "2026-09-16",
+  "nombre": "Tostada con manteca y mermelada",
+  "gramos": 40,
+  "kcal": 120,
+  "creado": "2026-09-16T12:30:00+00:00",
+  "base": 40
+ },
+ {
+  "id": "612d4e27-eae9-47f9-b8f1-837c4cddaf9b",
+  "fecha": "2026-09-16",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 150,
+  "kcal": 200,
+  "creado": "2026-09-16T12:30:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "4ab9ab0a-3e61-4072-a993-859a93366ca8",
+  "fecha": "2026-09-16",
+  "nombre": "Barrita Müecas pasas y arándanos (negra)",
+  "gramos": 45,
+  "kcal": 148,
+  "creado": "2026-09-16T18:00:00+00:00",
+  "base": 45
+ },
+ {
+  "id": "d41be630-a9db-4141-b47a-743d20f588bf",
+  "fecha": "2026-09-16",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-09-16T20:44:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "cdac5cc2-eea0-4718-8361-5c1f6afc61ba",
+  "fecha": "2026-09-16",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-16T20:44:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "01862aa3-186d-4133-8957-777bf507d923",
+  "fecha": "2026-09-16",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-09-16T20:44:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "540f3b9c-7355-464a-8b20-ceae2f72c294",
+  "fecha": "2026-09-16",
+  "nombre": "Bife magro de cerdo con puré de zanahoria",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-16T16:20:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "badb9b00-8d73-4efe-8cd6-0951562124f5",
+  "fecha": "2026-09-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-16T20:46:59.703+00:00",
+  "base": null
+ },
+ {
+  "id": "22e604d7-2a36-49dd-b07e-b59f2d8d7df1",
+  "fecha": "2026-09-16",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-16T20:46:59.94+00:00",
+  "base": null
+ },
+ {
+  "id": "18292dc6-ab2c-4b19-9663-0da1f5d8ecc1",
+  "fecha": "2026-09-17",
+  "nombre": "Tostada con queso crema y huevo",
+  "gramos": 150,
+  "kcal": 420,
+  "creado": "2026-09-17T12:00:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "bde1bae2-97a9-4026-836a-ca5a04e8ed44",
+  "fecha": "2026-09-17",
+  "nombre": "Carne asada en cocción lenta con panaché de choclo, papa y remolacha",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-17T16:00:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "f934688a-9bf9-40d3-91b0-f89bb77fb961",
+  "fecha": "2026-09-17",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-17T19:59:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "ddd3273a-649f-464b-88c8-6d7db23159c1",
+  "fecha": "2026-09-17",
+  "nombre": "bocadito de higo con nuez",
+  "gramos": 150,
+  "kcal": 150,
+  "creado": "2026-09-17T19:59:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "3f2e9a87-40fc-4abb-a266-eb00c85145a5",
+  "fecha": "2026-09-17",
+  "nombre": "Barrita Müecas cacao, avellanas y coco (rosa)",
+  "gramos": 45,
+  "kcal": 212,
+  "creado": "2026-09-17T19:59:00+00:00",
+  "base": 45
+ },
+ {
+  "id": "fc4947b4-64ce-4014-8587-7bf65b4f47e1",
+  "fecha": "2026-09-17",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-09-17T20:13:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "51afb1b8-8bb0-4295-88c1-bde6f0de729c",
+  "fecha": "2026-09-17",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-17T20:13:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "5e4ee7b1-147f-49b7-8848-7fb522c8592d",
+  "fecha": "2026-09-17",
+  "nombre": "Carne asada en cocción lenta con puré de papas al verdeo",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-17T22:35:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "860b89f1-1187-4c68-85fd-f6db4dc74451",
+  "fecha": "2026-09-21",
+  "nombre": "bocadito de higo con nuez",
+  "gramos": 150,
+  "kcal": 150,
+  "creado": "2026-09-21T14:41:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "ec7c32ea-b588-46b9-8245-ce94044f3fc8",
+  "fecha": "2026-09-21",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-21T14:41:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "035b06c4-9edf-4cb4-b24b-abfdee1f50d3",
+  "fecha": "2026-09-21",
+  "nombre": "Green salad con brócoli, papas, queso, zanahoria, hojas verdes, tomates cherry, pollo y semillas de lino",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-21T16:57:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "549d5ec5-fb93-4483-8a79-8e7877c6820e",
+  "fecha": "2026-09-21",
+  "nombre": "Té",
+  "gramos": 200,
+  "kcal": 4,
+  "creado": "2026-09-21T17:24:00+00:00",
+  "base": 200
+ },
+ {
+  "id": "af54af31-b239-49f7-97ea-33ad80969605",
+  "fecha": "2026-09-21",
+  "nombre": "Barrita de cereal",
+  "gramos": 23,
+  "kcal": 148,
+  "creado": "2026-09-21T18:51:00+00:00",
+  "base": 23
+ },
+ {
+  "id": "59ec3b1f-0746-4bf5-a8f7-6bfa0e86e9f8",
+  "fecha": "2026-09-21",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-09-21T20:35:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "cd5b14b4-5c3f-43d4-9b70-f9e4fd108a3d",
+  "fecha": "2026-09-22",
+  "nombre": "Carne asada en cocción lenta con risotto de champignones",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-22T15:53:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "9897840a-1000-4547-9c60-d0207f78d150",
+  "fecha": "2026-09-22",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 220,
+  "kcal": 380,
+  "creado": "2026-09-22T10:20:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "413f7d4f-43a9-4062-bbb2-76fb2f931c06",
+  "fecha": "2026-09-22",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-22T16:01:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "5335d9e1-b92c-4fb3-9a4d-f34859fa7313",
+  "fecha": "2026-09-22",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-22T20:10:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "957c7421-ba8c-41fd-9956-b4d3da1415e2",
+  "fecha": "2026-09-22",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-09-22T20:40:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "46303213-a598-4775-ac62-d999f33d2ab4",
+  "fecha": "2026-09-23",
+  "nombre": "Tostada con miel y banana",
+  "gramos": 110,
+  "kcal": 209,
+  "creado": "2026-09-23T16:26:00+00:00",
+  "base": 110
+ },
+ {
+  "id": "792279c1-b647-4485-80d9-2bff214a0fa7",
+  "fecha": "2026-09-23",
+  "nombre": "Yogur parfait grande (con granola y frutas)",
+  "gramos": 320,
+  "kcal": 384,
+  "creado": "2026-09-23T16:27:00+00:00",
+  "base": 320
+ },
+ {
+  "id": "c79a8259-8442-4d6c-8123-614cd926faf0",
+  "fecha": "2026-09-23",
+  "nombre": "Bife magro de cerdo con puré de zanahoria",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-23T16:28:00+00:00",
+  "base": 100
+ },
+ {
+  "id": "13cfb864-f70a-4653-808e-632710f3fd66",
+  "fecha": "2026-09-23",
+  "nombre": "Manzana",
+  "gramos": 150,
+  "kcal": 78,
+  "creado": "2026-09-23T18:24:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "0cfa4d3c-3470-4343-ad61-fee85d67b5e6",
+  "fecha": "2026-09-23",
+  "nombre": "Yogur Tregar con frutas (entero, arándano)",
+  "gramos": 150,
+  "kcal": 159,
+  "creado": "2026-09-23T19:45:00+00:00",
+  "base": 150
+ },
+ {
+  "id": "7c5b46a0-b555-458a-9520-f30be42975c8",
+  "fecha": "2026-09-23",
+  "nombre": "Mix de frutos secos",
+  "gramos": 30,
+  "kcal": 180,
+  "creado": "2026-09-23T19:45:00+00:00",
+  "base": 30
+ },
+ {
+  "id": "4b704743-80d6-4c6f-a801-6f068c3af17f",
+  "fecha": "2026-09-23",
+  "nombre": "Kiwi",
+  "gramos": 75,
+  "kcal": 45,
+  "creado": "2026-09-23T19:45:00+00:00",
+  "base": 75
+ },
+ {
+  "id": "bacb76c8-c6e1-4e37-bbf5-7a9d7dfd9dfb",
+  "fecha": "2026-09-24",
+  "nombre": "Factura (promedio)",
+  "gramos": 55,
+  "kcal": 209,
+  "creado": "2026-09-24T14:42:00+00:00",
+  "base": 55
+ },
+ {
+  "id": "d66ea65b-c498-485a-a23d-38c2be8c9512",
+  "fecha": "2026-09-24",
+  "nombre": "Banana",
+  "gramos": 120,
+  "kcal": 108,
+  "creado": "2026-09-24T14:42:00+00:00",
+  "base": 120
+ },
+ {
+  "id": "fe96dc40-adea-41a2-8da0-b4bd98c7bf0f",
+  "fecha": "2026-09-24",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-24T14:47:34.32+00:00",
+  "base": null
+ },
+ {
+  "id": "67f35310-5ba2-47d3-9bf8-fa4a233df8ff",
+  "fecha": "2026-09-24",
+  "nombre": "💧 Agua",
+  "gramos": 500,
+  "kcal": 0,
+  "creado": "2026-09-24T14:47:34.145+00:00",
+  "base": null
+ },
+ {
+  "id": "1c59d1e1-13a4-4266-9055-a5314ba6ff57",
+  "fecha": "2026-09-24",
+  "nombre": "Pollo con puré emulsión de zanahorias",
+  "gramos": 100,
+  "kcal": 500,
+  "creado": "2026-09-24T17:57:00+00:00",
+  "base": 100
+ }
+]
