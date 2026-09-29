@@ -1,3 +1,6 @@
 # claves reales: nunca al repo público
 garmin-sync/config.json
 __pycache__/
+
+# respaldos con datos personales: NUNCA al repo publico
+respaldo-supabase-*/
