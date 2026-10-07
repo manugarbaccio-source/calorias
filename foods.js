@@ -90,6 +90,7 @@ const BASE_ALIMENTOS = [
   { n: "Proteinccino (cappuccino proteico Powermix)", a: ["proteinccino", "cappuccino proteico", "capuchino proteico", "cafe proteico", "proffe", "powermix"], k: 79, p: 250, u: "1 vaso (250 ml · 198 kcal · 26 g proteína)" },
   { n: "Batido de proteína con leche descremada", a: ["batido de proteina", "proteina con leche", "scoop con leche", "whey con leche", "batido proteico", "licuado de proteina", "shake de proteina"], k: 74, p: 280, u: "1 batido (scoop 30 g + 250 ml leche desc. · ~205 kcal · ~32 g proteína)" },
   { n: "Scoop de proteína whey (solo, en agua)", a: ["scoop", "scoop de proteina", "proteina", "whey", "proteina en polvo"], k: 400, p: 30, u: "1 scoop (30 g · ~120 kcal · 24 g proteína)" },
+  { n: "Ensalada de atún y fideos (Donut Makers)", a: ["ensalada de atun", "ensalada atun", "ensalada de atun y fideos", "ensalada de fideos", "ensalada donut makers", "atun con fideos", "fideos con atun"], k: 150, p: 400, u: "1 pote (~400 g · ~600 kcal · estimado, sin dato oficial)" },
   { n: "Yogur Tregar Tops con copos y miel (descremado)", a: ["yogur tops", "tops", "tregar tops", "yogur con copos", "yogur con cereales", "yogur descremado con copos"], k: 76, p: 164, u: "1 vaso (164 g · 125 kcal)" },
   { n: "Yogur descremado", a: ["yogur light", "ser"], k: 45, p: 190, u: "1 pote" },
   { n: "Leche entera", a: ["leche", "vaso de leche"], k: 60, p: 200, u: "1 vaso" },

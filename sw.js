@@ -1,6 +1,6 @@
 // Service worker: cachea el "cascarón" de la app para que abra sin conexión.
-const CACHE = "calorias-v25";
-const ARCHIVOS = ["./", "index.html", "styles.css?v=25", "app.js?v=25", "foods.js?v=25", "menu-trabajo.js?v=25", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
+const CACHE = "calorias-v26";
+const ARCHIVOS = ["./", "index.html", "styles.css?v=26", "app.js?v=26", "foods.js?v=26", "menu-trabajo.js?v=26", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARCHIVOS)));
