@@ -32,7 +32,7 @@ function uuid() {
 
 /* ══════════════════ auto-actualización ══════════════════ */
 // Si el servidor tiene una versión más nueva, limpia cachés y recarga solo.
-const APP_VERSION = 26;
+const APP_VERSION = 27;
 
 async function chequearActualizacion() {
   try {
