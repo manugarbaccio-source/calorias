@@ -88,6 +88,8 @@ const BASE_ALIMENTOS = [
   { n: "Yogur Dahi descremado con frutilla", a: ["yogur dahi", "dahi", "dahi frutilla", "yogur de frutilla", "yogur frutilla", "yogur descremado frutilla"], k: 96, p: 190, u: "1 pote (190 g · 182 kcal)" },
   { n: "Yogur parfait grande (con granola y frutas)", a: ["parfait", "yogur parfait", "yogurt parfait", "yogur con granola", "parfait de frutas", "parfait grande"], k: 120, p: 320, u: "1 vaso grande (320 g · ~385 kcal)" },
   { n: "Proteinccino (cappuccino proteico Powermix)", a: ["proteinccino", "cappuccino proteico", "capuchino proteico", "cafe proteico", "proffe", "powermix"], k: 79, p: 250, u: "1 vaso (250 ml · 198 kcal · 26 g proteína)" },
+  { n: "Batido de proteína con leche descremada", a: ["batido de proteina", "proteina con leche", "scoop con leche", "whey con leche", "batido proteico", "licuado de proteina", "shake de proteina"], k: 74, p: 280, u: "1 batido (scoop 30 g + 250 ml leche desc. · ~205 kcal · ~32 g proteína)" },
+  { n: "Scoop de proteína whey (solo, en agua)", a: ["scoop", "scoop de proteina", "proteina", "whey", "proteina en polvo"], k: 400, p: 30, u: "1 scoop (30 g · ~120 kcal · 24 g proteína)" },
   { n: "Yogur Tregar Tops con copos y miel (descremado)", a: ["yogur tops", "tops", "tregar tops", "yogur con copos", "yogur con cereales", "yogur descremado con copos"], k: 76, p: 164, u: "1 vaso (164 g · 125 kcal)" },
   { n: "Yogur descremado", a: ["yogur light", "ser"], k: 45, p: 190, u: "1 pote" },
   { n: "Leche entera", a: ["leche", "vaso de leche"], k: 60, p: 200, u: "1 vaso" },
