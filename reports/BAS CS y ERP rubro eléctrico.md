@@ -119,3 +119,38 @@ Hay un escenario en que **tiene sentido quedarse con BAS CS**: si BAS demuestra 
 La pregunta de fondo no es si BAS CS "es bueno" (su núcleo contable y de stock lo es), sino **dónde va a estar la fuente de ventaja de una distribuidora eléctrica en los próximos cinco años**. La respuesta que surge de la evidencia es que va a estar en la velocidad para llevar miles de precios de proveedores a todos los canales y en la capacidad de venderle al electricista y al mayorista por donde ellos compran. Ese terreno lo definen la API y los conectores, no el libro diario. BAS apostó a la profundidad administrativa y a integraciones por proyecto; el mercado se movió hacia ecosistemas abiertos y verticales. Y la consolidación (Constellation con Tango, Visma con Xubio y Calipso, Thomson Reuters con Bejerman) va a acelerar esa brecha a favor de los que tienen capital para invertir en plataforma.
 
 También hay una lección sobre la información disponible: **en este mercado casi todo es autodeclarado**. No hay mediciones de cuota, reseñas independientes ni precios públicos, y ni siquiera se sabe qué sistema usan las grandes distribuidoras eléctricas argentinas. Por eso la ventaja de quien decide no está en leer más informes, sino en **diseñar una prueba propia**: tu catálogo, tus listas de proveedores, tus canales y dos o tres referencias reales del rubro. Esa prueba vale más que cualquier puntuación de este documento, y es el paso que destraba la decisión entre seguir con BAS CS o migrar.
+
+## Anexo: búsqueda del manual de BAS CS en fuentes alternativas (2/11/2026)
+
+Busqué copias o fragmentos del manual de BAS CS fuera de los dominios de BAS: distribuidores, PDFs, Scribd, SlideShare, Studocu, YouTube y foros. **No encontré ninguna copia del manual.** Tampoco pude abrir páginas completas, porque la red de la sesión bloqueó también los sitios de distribuidores. Lo que sigue sale de fragmentos del buscador de páginas de distribuidores y de terceros, y está etiquetado **[Autodeclarado — distribuidor]**.
+
+**Funciones que agrega este anexo:**
+
+- **Listas de precios:** cantidad ilimitada, calculadas por reglas de negocio. Admiten vigencia futura, listas por cliente, autorización de listas y costos en moneda local y extranjera. Fuente: [Neden, distribuidor BAS](https://neden.com.ar/bas-company-steering.php).
+- **Descuentos:** por volumen según tipo de cliente y tipo de producto, y promociones.
+- **Artículos:** código de producto por cliente y por proveedor, proveedores habituales y "productos alternativos". Esto se acerca a manejar equivalencias, pero no está confirmado que lo sea.
+- **Stock:** mínimo e ideal, y punto, método y plazo de reposición definidos por depósito. Maneja números de serie y es multiempresa y multisucursal.
+- **Lotes:** según la documentación oficial 4.5.0, vista solo como fragmento del buscador, maneja lotes con vencimiento y permite importarlos.
+- **Ventas:** circuito de pedidos, remitos y facturas configurable, con control de crédito y de saldo al tomar el pedido, y facturación automática de abonos.
+- **Compras:**
+  - órdenes de compra;
+  - registro y comparación de cotizaciones de proveedores;
+  - presupuesto de compras;
+  - control de recepción;
+  - auditoría de compras;
+  - evaluación de proveedores.
+- **Integraciones:** un distribuidor menciona integración con Mercado Libre y una "interfaz para integración vía APIs". El conector de terceros [Grow2on](https://grow2on.com) nombra a BAS junto a Tiendanube, WooCommerce y VTEX, pero no se sabe qué alcance tiene. En el caso Fox Head, la integración con Mercado Libre la hizo un partner (Balcony) con consultores de BAS, así que no es nativa.
+
+**Sigue sin verificarse:**
+1. Importar listas de proveedores y actualizar costos y precios de forma masiva. **Es el punto más crítico para el rubro eléctrico.**
+2. Equivalencias reales entre artículos.
+3. Generación automática de sugerencias de compra.
+4. Presupuesto o cotización de venta como comprobante propio.
+5. Transferencias entre sucursales y stock en tránsito.
+6. Detalle técnico de la WebAPI: endpoints, autenticación y licencia.
+7. Conectores nativos con Tiendanube, WooCommerce, VTEX o Power BI.
+8. Versiones posteriores a la 4.6.0.
+
+**Impacto en las conclusiones:** la profundidad comercial de BAS CS en listas, descuentos, códigos por cliente y proveedor, reposición por depósito y compras es **mayor de lo que mostraba el informe principal**. Por eso en esa dimensión su puntaje podría subir alrededor de medio punto, lo que lo dejaría cerca de 6,0 en lugar de 5,7.
+
+**No cambia el diagnóstico central.** La brecha de BAS CS está en lo digital: no tiene arquitectura web, no hay API pública documentada, no tiene conectores certificados con Mercado Libre ni Tiendanube, y no tiene portal B2B ni app de preventa. Los 8 puntos de arriba son exactamente las preguntas que conviene llevar a la demo con BAS.
