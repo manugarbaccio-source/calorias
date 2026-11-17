@@ -32,7 +32,7 @@ function uuid() {
 
 /* ══════════════════ auto-actualización ══════════════════ */
 // Si el servidor tiene una versión más nueva, limpia cachés y recarga solo.
-const APP_VERSION = 27;
+const APP_VERSION = 28;
 
 async function chequearActualizacion() {
   try {
@@ -162,6 +162,17 @@ function extraerCantidad(texto) {
 }
 
 function parsearEntrada(texto) {
+  // Los nombres del menú traen comas y "y" ("Wok de tallarines, vegetales salteados y carne...").
+  // Si el texto entero es el comienzo del nombre de un alimento, no se corta en pedazos.
+  const entero = extraerCantidad(normalizar(texto));
+  if (entero.query && entero.query.split(" ").filter(t => !RELLENO.has(t)).length >= 4) {
+    const idx = todosLosAlimentos().findIndex(a => normalizar(a.n).startsWith(entero.query));
+    if (idx !== -1) {
+      const candidatos = buscarCandidatos(entero.query);
+      const elegido = Math.max(0, candidatos.findIndex(c => normalizar(c.alimento.n).startsWith(entero.query)));
+      return [{ original: entero.query, cantidad: entero.cantidad, query: entero.query, candidatos, elegido }];
+    }
+  }
   // dividir ANTES de normalizar: normalizar() borra las comas
   const segmentos = texto.toLowerCase()
     .split(/\s*[,;+]\s*|\s+y\s+/)
@@ -181,6 +192,11 @@ function parsearEntrada(texto) {
         items.push({ original: seg, cantidad, query, candidatos, elegido: idxCon });
         continue;
       }
+      const nuevo = platoTrabajoNuevo(query);
+      if (nuevo) {
+        items.push({ original: seg, cantidad, query, candidatos: [nuevo, ...candidatos.filter(c => c.alimento.trabajo)].slice(0, 6), elegido: 0 });
+        continue;
+      }
       for (const parte of query.split(" con ")) {
         const sub = extraerCantidad(parte.trim());
         if (!sub.query) continue;
@@ -191,6 +207,28 @@ function parsearEntrada(texto) {
     }
   }
   return items;
+}
+
+// Los platos del trabajo rotan el acompañamiento ("carne asada en cocción lenta con X"):
+// si la parte antes del "con" es el comienzo de un plato conocido (3+ palabras con contenido,
+// para no confundir "milanesa con puré" casero), es un plato nuevo de esa misma categoría.
+function platoTrabajoNuevo(query) {
+  if (typeof ALIMENTOS_TRABAJO === "undefined") return null;
+  const i = query.indexOf(" con ");
+  const izq = query.slice(0, i).trim();
+  const palabras = izq.split(" ").filter(t => !RELLENO.has(t));
+  if (palabras.length < 3) return null;
+  const parecidos = ALIMENTOS_TRABAJO.filter(a => normalizar(a.n).startsWith(izq + " "));
+  if (!parecidos.length) return null;
+  const votos = {};
+  for (const a of parecidos) votos[a.cat] = (votos[a.cat] || 0) + 1;
+  const cat = Object.keys(votos).sort((x, y) => votos[y] - votos[x])[0];
+  const base = parecidos.find(a => a.cat === cat);
+  const prefijo = base.n.split(" ").slice(0, izq.split(" ").length).join(" ");
+  return {
+    alimento: { n: prefijo + query.slice(i), a: [], k: base.k, p: 100, u: `1 porción · ${cat}`, trabajo: true, cat },
+    puntaje: 90,
+  };
 }
 
 /* ══════════════════ buscador de alimentos ══════════════════ */
@@ -220,12 +258,16 @@ function puntuarNombre(nombreNorm, queryNorm) {
 
 function buscarCandidatos(query) {
   const q = normalizar(query);
+  // "empanadas de carne" no es el plato "Empanadas de carne, pollo, jamón..." del trabajo:
+  // con 1-2 palabras, un plato del trabajo solo gana si se lo nombra exacto o por su alias.
+  const corta = q.split(" ").filter(t => !RELLENO.has(t)).length < 3;
   const resultados = [];
   for (const alim of todosLosAlimentos()) {
     let mejor = puntuarNombre(normalizar(alim.n), q);
     for (const alias of (alim.a || [])) {
       mejor = Math.max(mejor, puntuarNombre(normalizar(alias), q));
     }
+    if (alim.trabajo && corta && mejor < 100) mejor -= 30;
     if (alim.propio && mejor > 0) mejor += 5; // priorizar alimentos propios
     if (alim.trabajo && mejor > 0 && alim.dias && alim.dias.includes(hoyStr())) mejor += 12; // el plato de HOY del trabajo primero
     if (mejor >= 30) resultados.push({ alimento: alim, puntaje: mejor });
